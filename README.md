@@ -81,6 +81,6 @@
 
 # credits
                
-1) 𝙾𝙿 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 - [𝗠𝗔𝗙𝗜𝗔 𝗕𝗢𝗧](https://github.com/DeadlyGhoulsOP/DeadlyGhouls)
+1) 𝙾𝙿 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 - [𝗠𝗔𝗙𝗜𝗔 𝗕𝗢𝗧](https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT)
 2) 𝙼𝚈 𝙿𝚁𝙾 𝙱𝚁𝙾 - [𝗛𝗜𝗠𝗔𝗡𝗦𝗛𝗨](t.me/OFFICIAL_SAMEER)
 3) Mʏ Bʀᴏᴛʜᴇʀ  - [𝗞𝗥𝗜𝗦𝗛](t.me/D3_krish)
