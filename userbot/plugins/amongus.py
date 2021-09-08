@@ -17,8 +17,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 async def _(event):
     if event.fwd_from:
         return
-    h1m4n5hu0p = bot.uid
-    USERNAME = f"tg://user?id={h1m4n5hu0p}"
+    official_sameer = bot.uid
+    USERNAME = f"tg://user?id={official_sameer}"
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
     text1 = await edit_or_reply(event, "Hmm... Looks like Something is wrong here🤔🧐!!")

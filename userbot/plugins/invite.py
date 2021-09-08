@@ -1,5 +1,5 @@
 # Originally made by @rekcah for @javes05
-# porting to hellbot by @h1m4n5hu0p_the_badass...
+# porting to hellbot by @official_sameer_the_badass...
 # i asked rekcah before porting...not like other kangers....
 # keep credit if u wanna kang...
 # Now in MafiaBot
@@ -73,7 +73,7 @@ async def get_users(event):
         mafia = await edit_or_reply(event, "`processing...`")
     else:
         mafia = await edit_or_reply(event, "`processing...`")
-    h1m4n5hu0p = await get_chatinfo(event)
+    official_sameer = await get_chatinfo(event)
     chat = await event.get_chat()
     if event.is_private:
         return await mafia.edit("`Sorry, Cant add users here`")
@@ -82,7 +82,7 @@ async def get_users(event):
     error = "None"
 
     await mafia.edit("**TerminalStatus**\n\n`Collecting Users.......`")
-    async for user in event.client.iter_participants(h1m4n5hu0p.full_chat.id):
+    async for user in event.client.iter_participants(official_sameer.full_chat.id):
         try:
             if error.startswith("Too"):
                 return await mafia.edit(

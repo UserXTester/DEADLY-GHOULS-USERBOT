@@ -7,9 +7,9 @@ from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"
 
-h1m4n5hu0p = DeadlyGhouls.uid
+official_sameer = DeadlyGhouls.uid
 
-mafia = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+mafia = f"[{DEFAULTUSER}](tg://user?id={official_sameer})"
 
 @DeadlyGhouls.on(admin_cmd(pattern="hvd$"))
 @DeadlyGhouls.on(sudo_cmd(pattern="hvd$", allow_sudo=True))

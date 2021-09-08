@@ -6,7 +6,7 @@ from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from ..cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-h1m4n5hu0p = borg.uid
+official_sameer = borg.uid
 
 
 @bot.on(admin_cmd(pattern=f"hbping$", outgoing=True))
@@ -68,7 +68,7 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"__**꧁ Pong! ꧂__**\n\n   ⚘ {ms}\n   ⚘ __**My**__ __**Master**__ [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+        f"__**꧁ Pong! ꧂__**\n\n   ⚘ {ms}\n   ⚘ __**My**__ __**Master**__ [{DEFAULTUSER}](tg://user?id={official_sameer})"
     )
 
 

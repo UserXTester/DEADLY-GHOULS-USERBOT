@@ -1,5 +1,5 @@
 # Credits to @spechide and his team for @TROLLVOICEBOT
-# made by @h1m4n5hu0p_the_badass from the snippets of waifu AKA stickerizerbot....
+# made by @official_sameer_the_badass from the snippets of waifu AKA stickerizerbot....
 # kang karega kya madarchod?
 # aukaat h bsdk teri...jake baap ka loda chus ke aa....
 
@@ -14,25 +14,25 @@ from userbot.helpers.functions import deEmojify
 
 @bot.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="mev(?: |$)(.*)", allow_sudo=True))
-async def nope(h1m4n5hu0p):
-    mafia = h1m4n5hu0p.pattern_match.group(1)
+async def nope(official_sameer):
+    mafia = official_sameer.pattern_match.group(1)
     if not mafia:
-        if h1m4n5hu0p.is_reply:
-            (await h1m4n5hu0p.get_reply_message()).message
+        if official_sameer.is_reply:
+            (await official_sameer.get_reply_message()).message
         else:
-            await edit_or_reply(h1m4n5hu0p, "`Sir please give some query to search and download it for you..!`"
+            await edit_or_reply(official_sameer, "`Sir please give some query to search and download it for you..!`"
             )
             return
 
     troll = await bot.inline_query("TrollVoiceBot", f"{(deEmojify(mafia))}")
 
     await troll[0].click(
-        h1m4n5hu0p.chat_id,
-        reply_to=h1m4n5hu0p.reply_to_msg_id,
-        silent=True if h1m4n5hu0p.is_reply else False,
+        official_sameer.chat_id,
+        reply_to=official_sameer.reply_to_msg_id,
+        silent=True if official_sameer.is_reply else False,
         hide_via=True,
     )
-    await h1m4n5hu0p.delete()
+    await official_sameer.delete()
     
 
 CmdHelp("memevoice").add_command(

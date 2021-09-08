@@ -635,14 +635,14 @@ def run_async(loop, coro):
     return asyncio.run_coroutine_threadsafe(coro, loop).result()
 
 
-async def unsavegif(event, h1m4n5hu0p):
+async def unsavegif(event, official_sameer):
     try:
         await event.client(
             functions.messages.SaveGifRequest(
                 id=types.InputDocument(
-                    id=h1m4n5hu0p.media.document.id,
-                    access_hash=h1m4n5hu0p.media.document.access_hash,
-                    file_reference=h1m4n5hu0p.media.document.file_reference,
+                    id=official_sameer.media.document.id,
+                    access_hash=official_sameer.media.document.access_hash,
+                    file_reference=official_sameer.media.document.file_reference,
                 ),
                 unsave=True,
             )

@@ -1,4 +1,4 @@
-# Ascii module by @h1m4n5hu0p_the_badass for @hellbot_official
+# Ascii module by @official_sameer_the_badass for @hellbot_official
 # A over powerful bot
 # I know u will kang...
 # GTFO!! MOTHERFUCKER!!!!!!!!!!!
@@ -35,7 +35,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual users message.😒🤐")
         return
-    h1m4n5hu0p = await edit_or_reply(event, "Wait making ASCII...🤓🔥🔥")
+    official_sameer = await edit_or_reply(event, "Wait making ASCII...🤓🔥🔥")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -44,14 +44,14 @@ async def _(event):
             await event.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await h1m4n5hu0p.edit("`Please unblock @asciiart_bot and try again`")
+            await official_sameer.edit("`Please unblock @asciiart_bot and try again`")
             return
         if response.text.startswith("Forward"):
-            await h1m4n5hu0p.edit(
+            await official_sameer.edit(
                 "`can you kindly disable your forward privacy settings for good?`"
             )
         else:
-            await h1m4n5hu0p.delete()
+            await official_sameer.delete()
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
@@ -77,7 +77,7 @@ async def _(event):
     if reply_message.sender.bot:
         await edit_or_reply(event, "Reply to actual users message.😒🤐")
         return
-    h1m4n5hu0p = await edit_or_reply(event, "`Processing`")
+    official_sameer = await edit_or_reply(event, "`Processing`")
     async with event.client.conversation(chat) as conv:
         try:
             await conv.send_message("/start")
@@ -87,9 +87,9 @@ async def _(event):
             pic = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await h1m4n5hu0p.edit("Please unblock @Lines50Bot and try again")
+            await official_sameer.edit("Please unblock @Lines50Bot and try again")
             return
-        await h1m4n5hu0p.delete()
+        await official_sameer.delete()
         await event.client.send_file(
             event.chat_id,
             pic,

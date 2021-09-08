@@ -12,8 +12,8 @@ from userbot import bot as DeadlyGhouls
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 mafia_logo = "./OFFICIAL_SAMEER/DeadlyGhouls_logo.jpg"
-h1m4n5hu0p = DeadlyGhouls.uid
-mafia = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+official_sameer = DeadlyGhouls.uid
+mafia = f"[{DEFAULTUSER}](tg://user?id={official_sameer})"
 
 @DeadlyGhouls.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 @DeadlyGhouls.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
@@ -82,17 +82,17 @@ async def install(event):
     
 @DeadlyGhouls.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
 @DeadlyGhouls.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
-async def uninstall(h1m4n5hu0p):
-    if h1m4n5hu0p.fwd_from:
+async def uninstall(official_sameer):
+    if official_sameer.fwd_from:
         return
-    shortname = h1m4n5hu0p.pattern_match["shortname"]
+    shortname = official_sameer.pattern_match["shortname"]
     dir_path =f"./userbot/plugins/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
-        await h1m4n5hu0p.edit(f"Uninstalled `{shortname}` successfully")
+        await official_sameer.edit(f"Uninstalled `{shortname}` successfully")
     except OSError as e:
-        await h1m4n5hu0p.edit("Error: %s : %s" % (dir_path, e.strerror))
+        await official_sameer.edit("Error: %s : %s" % (dir_path, e.strerror))
 
 @DeadlyGhouls.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
 @DeadlyGhouls.on(sudo_cmd(pattern=r"upload (?P<shortname>\w+)$", allow_sudo=True))
