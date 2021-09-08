@@ -1,0 +1,39 @@
+name: LEGENDX
+
+on: push
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Find and Replace
+
+        uses: jacobtomlinson/gha-find-replace@master
+
+        with:
+
+          find: "DᴇᴀᴅʟʏGʜᴏᴜʟs"
+
+          replace: "∂єα∂ℓу gнσυℓѕ"
+
+      - name: Create Pull Request
+
+        uses: stefanzweifel/git-auto-commit-action@v4
+
+        with:
+
+          commit_message: 'MA KI CHUT VRMO🙈💋'
+
+          commit_options: '--no-verify'
+
+          repository: .
+
+          commit_user_name: LEGENDXOP
+
+          commit_user_email: legendxx08377@gmail.com
