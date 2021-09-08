@@ -60,42 +60,42 @@ async def _(event):
     stcr4 = await event.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
-    mafiaevent = await event.reply(f"{name} is ejected.......🤐")
+    deadlyevent = await event.reply(f"{name} is ejected.......🤐")
     await asyncio.sleep(2)
-    await mafiaevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await deadlyevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await deadlyevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.5)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     await stcr4.delete()
     if cmd == "":
-        await mafiaevent.edit(
+        await deadlyevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await mafiaevent.delete()
+        await deadlyevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
-        await mafiaevent.edit(
+        await deadlyevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await mafiaevent.delete()
+        await deadlyevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
@@ -106,34 +106,34 @@ async def _(event):
         return
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
-    mafiaevent = await edit_or_reply(event, f"{name} is ejected.......")
+    deadlyevent = await edit_or_reply(event, f"{name} is ejected.......")
     await asyncio.sleep(2)
-    await mafiaevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await deadlyevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await deadlyevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.8)
-    await mafiaevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await deadlyevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     if cmd == "":
-        await mafiaevent.edit(
+        await deadlyevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
     elif cmd == "n":
-        await mafiaevent.edit(
+        await deadlyevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
 

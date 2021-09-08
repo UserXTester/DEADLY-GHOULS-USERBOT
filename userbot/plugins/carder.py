@@ -12,15 +12,15 @@ from DeadlyGhouls import CmdHelp, bot as DeadlyGhouls
 
 @DeadlyGhouls.on(admin_cmd("gencc$"))
 @DeadlyGhouls.on(sudo_cmd("gencc$", allow_sudo=True))
-async def _(mafiaevent):
-    if mafiaevent.fwd_from:
+async def _(deadlyevent):
+    if deadlyevent.fwd_from:
         return
-    mafiacc = Faker()
-    mafianame = mafiacc.name()
-    mafiaadre = mafiacc.address()
-    mafiacard = mafiacc.credit_card_full()
+    deadlycc = Faker()
+    deadlyname = deadlycc.name()
+    deadlyadre = deadlycc.address()
+    deadlycard = deadlycc.credit_card_full()
     
-    await edit_or_reply(mafiaevent, f"__**👤 NAME :- **__\n`{mafianame}`\n\n__**🏡 ADDRESS :- **__\n`{mafiaadre}`\n\n__**💸 CARD :- **__\n`{mafiacard}`")
+    await edit_or_reply(deadlyevent, f"__**👤 NAME :- **__\n`{deadlyname}`\n\n__**🏡 ADDRESS :- **__\n`{deadlyadre}`\n\n__**💸 CARD :- **__\n`{deadlycard}`")
     
 
 @DeadlyGhouls.on(admin_cmd(pattern="bin ?(.*)"))
@@ -28,13 +28,13 @@ async def _(mafiaevent):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/bin {mafia_input}")
+              await event.client.send_message(chat, f"/bin {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -49,13 +49,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/vbv {mafia_input}")
+              await event.client.send_message(chat, f"/vbv {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -70,13 +70,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/key {mafia_input}")
+              await event.client.send_message(chat, f"/key {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -91,13 +91,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/iban {mafia_input}")
+              await event.client.send_message(chat, f"/iban {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -112,13 +112,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/ss {mafia_input}")
+              await event.client.send_message(chat, f"/ss {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")
@@ -133,13 +133,13 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return 
-    mafia_input = event.pattern_match.group(1)
+    deadly_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
-    await event.edit(f"Trying to generate CC from the given bin `{mafia_input}`")
+    await event.edit(f"Trying to generate CC from the given bin `{deadly_input}`")
     async with event.client.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=1247032902))
-              await event.client.send_message(chat, f"/gen {mafia_input}")
+              await event.client.send_message(chat, f"/gen {deadly_input}")
               response = await response 
           except YouBlockedUserError: 
               await event.reply("Please Unblock @carol5_bot")

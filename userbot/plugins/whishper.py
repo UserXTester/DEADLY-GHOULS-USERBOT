@@ -1,4 +1,4 @@
-# Made by @Kraken_The_BadASS for @mafiaBot_Official
+# Made by @Kraken_The_BadASS for @deadlyBot_Official
 
 from DeadlyGhouls.utils import *
 from userbot.cmdhelp import CmdHelp

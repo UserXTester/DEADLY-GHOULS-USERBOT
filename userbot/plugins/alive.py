@@ -5,7 +5,7 @@
 import asyncio
 import random
 from telethon import events, version
-from userbot import ALIVE_NAME, mafiaversion
+from userbot import ALIVE_NAME, deadlyversion
 from userbot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp
@@ -19,18 +19,18 @@ if ludosudo:
 else:
     sudou = "False"
 
-mafia = bot.uid
+deadly = bot.uid
 
 MAFIA_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
 pm_caption = "  __**🔥🔥𝐌𝐀𝐅𝐈𝐀 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄🔥🔥**__\n\n"
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
 pm_caption += (
-    f"                 👑𝐌𝐀𝐒𝐓𝐄𝐑👑\n  **『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
+    f"                 👑𝐌𝐀𝐒𝐓𝐄𝐑👑\n  **『😈[{DEFAULTUSER}](tg://user?id={deadly})😈』**\n\n"
 )
 pm_caption += f"┏━━━━━━━━━━━━━━━━━━━\n"
 pm_caption += f"┣•➳➠ `Telethon:` `{version.__version__}` \n"
-pm_caption += f"┣•➳➠ `Version:` `{mafiaversion}`\n"
+pm_caption += f"┣•➳➠ `Version:` `{deadlyversion}`\n"
 pm_caption += f"┣•➳➠ `Sudo:` `{sudou}`\n"
 pm_caption += f"┣•➳➠ `Channel:` [ᴊᴏɪɴ](https://t.me/MafiaBot_Support)\n"
 pm_caption += f"┣•➳➠ `Creator:` [Himanshu](https://t.me/OFFICIAL_SAMEER)\n"

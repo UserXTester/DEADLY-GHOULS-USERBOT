@@ -22,7 +22,7 @@ async def direct_link_generator(request):
     if request.fwd_from:
         return
     """ direct links generator """
-    mafiaevent = await edit_or_reply(request, "`Processing...`")
+    deadlyevent = await edit_or_reply(request, "`Processing...`")
     textx = await request.get_reply_message()
     message = request.pattern_match.group(1)
     if message:
@@ -30,13 +30,13 @@ async def direct_link_generator(request):
     elif textx:
         message = textx.text
     else:
-        await mafiaevent.edit("`Usage: .direct <url>`")
+        await deadlyevent.edit("`Usage: .direct <url>`")
         return
     reply = ""
     links = re.findall(r"\bhttps?://.*\.\S+", message)
     if not links:
         reply = "`No links found!`"
-        await mafiaevent.edit(reply)
+        await deadlyevent.edit(reply)
     for link in links:
         if "drive.google.com" in link:
             reply += gdrive(link)
@@ -60,7 +60,7 @@ async def direct_link_generator(request):
             reply += androidfilehost(link)
         else:
             reply += re.findall(r"\bhttps?://(.*?[^/]+)", link)[0] + "is not supported"
-    await mafiaevent.edit(reply)
+    await deadlyevent.edit(reply)
 
 
 def gdrive(url: str) -> str:

@@ -18,7 +18,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 async def _(event):
     if event.fwd_from:
         return
-    mafia = await edit_or_reply(event, "`Starting AutoName Please Wait`")
+    deadly = await edit_or_reply(event, "`Starting AutoName Please Wait`")
     if event.fwd_from:
         return
 
@@ -60,7 +60,7 @@ async def _(event):
 
         await asyncio.sleep(DEL_TIME_OUT)
 
-    await mafia.edit(f"Auto Name has been started my Master")
+    await deadly.edit(f"Auto Name has been started my Master")
 
 
 @bot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602

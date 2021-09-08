@@ -1,6 +1,6 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, mafiaversion
+from userbot import ALIVE_NAME, StartTime, deadlyversion
 from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
 
@@ -53,23 +53,23 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="mafia$"))
-@bot.on(sudo_cmd(pattern="mafia$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="deadly$"))
+@bot.on(sudo_cmd(pattern="deadly$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
     reply_to_id = await reply_id(alive)
 
     if MAFIA_IMG:
-        mafia_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-        mafia_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
-        mafia_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
-        mafia_caption += f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-        mafia_caption += f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :**`{mafiaversion}`\n"
-        mafia_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
-        mafia_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
+        deadly_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
+        deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
+        deadly_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
+        deadly_caption += f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
+        deadly_caption += f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :**`{deadlyversion}`\n"
+        deadly_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
+        deadly_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
         await alive.client.send_file(
-            alive.chat_id, MAFIA_IMG, caption=mafia_caption, reply_to=reply_to_id
+            alive.chat_id, MAFIA_IMG, caption=deadly_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
@@ -79,7 +79,7 @@ async def amireallyalive(alive):
             f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ \n"
             f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
             f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-            f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :** `{mafiaversion}`\n"
+            f"**★ 𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 :** `{deadlyversion}`\n"
             f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
             f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n",
         )

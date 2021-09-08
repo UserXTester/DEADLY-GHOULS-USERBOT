@@ -31,7 +31,7 @@ from userbot.cmdhelp import CmdHelp
 async def who(event):
     if event.fwd_from:
         return
-    mafia = await edit_or_reply(
+    deadly = await edit_or_reply(
         event, "`Sit tight while I steal some data from This guuyyy...`"
     )
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -57,9 +57,9 @@ async def who(event):
         )
         if not photo.startswith("http"):
             os.remove(photo)
-        await mafia.delete()
+        await deadly.delete()
     except TypeError:
-        await mafia.edit(caption, parse_mode="html")
+        await deadly.edit(caption, parse_mode="html")
 
 
 async def get_user(event):

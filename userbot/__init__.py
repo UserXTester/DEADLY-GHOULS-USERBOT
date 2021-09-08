@@ -9,9 +9,9 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.5"
+deadlyversion = "2.0.5"
 botversion = "0.1"
-mafiatelethon = "1.21.1"
+deadlytelethon = "1.21.1"
 
 os.system("pip install aria2p")
 if Var.STRING_SESSION:
@@ -210,5 +210,5 @@ SUDO_LIST = {}
 
 
 from userbot.helpers import *
-from userbot.helpers import functions as mafiadef
+from userbot.helpers import functions as deadlydef
 from userbot.cmdhelp import CmdHelp

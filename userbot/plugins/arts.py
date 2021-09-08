@@ -271,7 +271,7 @@ L = (
     "╬═╬ \n"
     "╬═╬ \n"
     "╬═╬ \n"
-    "╬═╬ mafiao, My Friend :D \n"
+    "╬═╬ deadlyo, My Friend :D \n"
     "╬═╬☻/ \n"
     "╬═╬/▌ \n"
     "╬═╬/ \\n"
@@ -526,12 +526,12 @@ async def bluedevildog(dog):
     await edit_or_reply(dog, J)
 
 
-@bot.on(admin_cmd(pattern=r"mafiao$"))
-@bot.on(sudo_cmd(pattern="mafiao$", allow_sudo=True))
-async def bluedevilmafiao(mafiao):
-    if mafiao.fwd_from:
+@bot.on(admin_cmd(pattern=r"deadlyo$"))
+@bot.on(sudo_cmd(pattern="deadlyo$", allow_sudo=True))
+async def bluedevildeadlyo(deadlyo):
+    if deadlyo.fwd_from:
         return
-    await edit_or_reply(mafiao, K)
+    await edit_or_reply(deadlyo, K)
 
 
 @bot.on(admin_cmd(pattern=r"hmf$"))
@@ -617,7 +617,7 @@ CmdHelp("arts").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'mafiao', None, 'Use and see'
+  'deadlyo', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(

@@ -15,13 +15,13 @@ global groupsid
 groupsid = []
 
 
-async def all_groups_id(mafia):
-    mafiagroups = []
-    async for dialog in mafia.client.iter_dialogs():
+async def all_groups_id(deadly):
+    deadlygroups = []
+    async for dialog in deadly.client.iter_dialogs():
         entity = dialog.entity
         if isinstance(entity, Channel) and entity.megagroup:
-            mafiagroups.append(entity.id)
-    return mafiagroups
+            deadlygroups.append(entity.id)
+    return deadlygroups
 
 
 @bot.on(admin_cmd(pattern="frwd$"))

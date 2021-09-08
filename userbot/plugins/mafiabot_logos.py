@@ -11,24 +11,24 @@ from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
 from . import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-mafia = borg.uid
+deadly = borg.uid
 
 PICS_STR = []
 
 @bot.on(admin_cmd(pattern=r"logo ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
-async def _(mafiaevent):
-    event = await edit_or_reply(mafiaevent, "`Processing.....`")
-    fnt = await get_font_file(mafiaevent.client, "@D3VIL_FONTSS")
-    if mafiaevent.reply_to_msg_id:
-        rply = await mafiaevent.get_reply_message()
+async def _(deadlyevent):
+    event = await edit_or_reply(deadlyevent, "`Processing.....`")
+    fnt = await get_font_file(deadlyevent.client, "@D3VIL_FONTSS")
+    if deadlyevent.reply_to_msg_id:
+        rply = await deadlyevent.get_reply_message()
         logo_ = await rply.download_media()
     else:
         async for i in bot.iter_messages("@D3VIL_GFX_BG", filter=InputMessagesFilterPhotos):
     	    PICS_STR.append(i)
         pic = random.choice(PICS_STR)
         logo_ = await pic.download_media()
-    text = mafiaevent.pattern_match.group(1)
+    text = deadlyevent.pattern_match.group(1)
     if len(text) <= 8:
         font_size_ = 150
         strik = 10
@@ -62,9 +62,9 @@ async def _(mafiaevent):
     file_name = "MafiaBot.png"
     img.save(file_name, "png")
     await bot.send_file(
-        mafiaevent.chat_id,
+        deadlyevent.chat_id,
         file_name,
-        caption=f"**мα∂ε вү  :** 『[{DEFAULTUSER}](tg://user?id={mafia})』\n\n",
+        caption=f"**мα∂ε вү  :** 『[{DEFAULTUSER}](tg://user?id={deadly})』\n\n",
     )
     await event.delete()
     try:

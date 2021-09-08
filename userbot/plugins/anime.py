@@ -9,8 +9,8 @@ from DeadlyGhouls.helpers.functions import deEmojify
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(official_sameer):
-    mafia = official_sameer.pattern_match.group(1)
-    if not mafia:
+    deadly = official_sameer.pattern_match.group(1)
+    if not deadly:
         if official_sameer.is_reply:
             (await official_sameer.get_reply_message()).message
         else:
@@ -18,7 +18,7 @@ async def nope(official_sameer):
             )
             return
 
-    troll = await bot.inline_query("animedb_bot", f"{(deEmojify(mafia))}")
+    troll = await bot.inline_query("animedb_bot", f"{(deEmojify(deadly))}")
 
     await troll[0].click(
         official_sameer.chat_id,

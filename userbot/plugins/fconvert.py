@@ -21,13 +21,13 @@ if not os.path.isdir("./temp"):
 
 @bot.on(admin_cmd(pattern="stoi$"))
 @bot.on(sudo_cmd(pattern="stoi$", allow_sudo=True))
-async def _(mafia):
-    if mafia.fwd_from:
+async def _(deadly):
+    if deadly.fwd_from:
         return
-    reply_to_id = mafia.message.id
-    if mafia.reply_to_msg_id:
-        reply_to_id = mafia.reply_to_msg_id
-    event = await edit_or_reply(mafia, "Converting.....")
+    reply_to_id = deadly.message.id
+    if deadly.reply_to_msg_id:
+        reply_to_id = deadly.reply_to_msg_id
+    event = await edit_or_reply(deadly, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -36,11 +36,11 @@ async def _(mafia):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await mafia.client.download_media(
+        downloaded_file_name = await deadly.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await mafia.client.send_file(
+            caat = await deadly.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -56,13 +56,13 @@ async def _(mafia):
 
 @bot.on(admin_cmd(pattern="itos$"))
 @bot.on(sudo_cmd(pattern="itos$", allow_sudo=True))
-async def _(mafia):
-    if mafia.fwd_from:
+async def _(deadly):
+    if deadly.fwd_from:
         return
-    reply_to_id = mafia.message.id
-    if mafia.reply_to_msg_id:
-        reply_to_id = mafia.reply_to_msg_id
-    event = await edit_or_reply(mafia, "Converting.....")
+    reply_to_id = deadly.message.id
+    if deadly.reply_to_msg_id:
+        reply_to_id = deadly.reply_to_msg_id
+    event = await edit_or_reply(deadly, "Converting.....")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -71,11 +71,11 @@ async def _(mafia):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await mafia.client.download_media(
+        downloaded_file_name = await deadly.client.download_media(
             reply_message, downloaded_file_name
         )
         if os.path.exists(downloaded_file_name):
-            caat = await mafia.client.send_file(
+            caat = await deadly.client.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -157,31 +157,31 @@ async def on_file_to_photo(event):
 async def _(event):
     if event.fwd_from:
         return
-    mafiareply = await event.get_reply_message()
-    if not mafiareply or not mafiareply.media or not mafiareply.media.document:
+    deadlyreply = await event.get_reply_message()
+    if not deadlyreply or not deadlyreply.media or not deadlyreply.media.document:
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
-    if mafiareply.media.document.mime_type != "application/x-tgsticker":
+    if deadlyreply.media.document.mime_type != "application/x-tgsticker":
         return await edit_or_reply(event, "`Stupid!, This is not animated sticker.`")
     reply_to_id = event.message
     if event.reply_to_msg_id:
         reply_to_id = await event.get_reply_message()
     chat = "@tgstogifbot"
-    mafiaevent = await edit_or_reply(event, "`Converting to gif ...`")
+    deadlyevent = await edit_or_reply(event, "`Converting to gif ...`")
     async with event.client.conversation(chat) as conv:
         try:
             await silently_send_message(conv, "/start")
-            await event.client.send_file(chat, mafiareply.media)
+            await event.client.send_file(chat, deadlyreply.media)
             response = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
             if response.text.startswith("Send me an animated sticker!"):
-                return await mafiaevent.edit("`This file is not supported`")
-            mafiaresponse = response if response.media else await conv.get_response()
+                return await deadlyevent.edit("`This file is not supported`")
+            deadlyresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            mafiafile = Path(await event.client.download_media(mafiaresponse, "./temp/"))
-            mafiagif = Path(await unzip(mafiafile))
+            deadlyfile = Path(await event.client.download_media(deadlyresponse, "./temp/"))
+            deadlygif = Path(await unzip(deadlyfile))
             kraken = await event.client.send_file(
                 event.chat_id,
-                mafiagif,
+                deadlygif,
                 support_streaming=True,
                 force_document=False,
                 reply_to=reply_to_id,
@@ -196,12 +196,12 @@ async def _(event):
                     unsave=True,
                 )
             )
-            await mafiaevent.delete()
-            for files in (mafiagif, mafiafile):
+            await deadlyevent.delete()
+            for files in (deadlygif, deadlyfile):
                 if files and os.path.exists(files):
                     os.remove(files)
         except YouBlockedUserError:
-            await mafiaevent.edit("Unblock @tgstogifbot")
+            await deadlyevent.edit("Unblock @tgstogifbot")
             return
 
 
