@@ -11,7 +11,7 @@ from userbot import LOAD_PLUG, LOGS, deadlyversion
 from pathlib import Path
 import asyncio
 import telethon.utils
-MAFIA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
+MAFIA_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/c5148795f46fb78bab9b9.jpg"
 
 os.system("pip install -U telethon")
 
