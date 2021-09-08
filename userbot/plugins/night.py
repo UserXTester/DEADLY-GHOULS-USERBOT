@@ -40,7 +40,7 @@ async def set_not_night(event):
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` "
                 + "for the proper functioning of night functionality "
-                + "report in [MafiaBot](t.me/Mafia_Chit_Chat)\n\n `{}`".format(str(e)),
+                + "report in [DeadlyGhouls](t.me/Mafia_Chit_Chat)\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )

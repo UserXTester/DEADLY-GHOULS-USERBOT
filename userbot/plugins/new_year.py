@@ -1,7 +1,7 @@
 # Made By @Kraken_The_BadASS. Keep Credit if you are gonna copy paste it. LOL NOOBS....
 # Happy New Year plugin by Kraken_The_BadASS for Hellbot
 # Kangers keep credits...
-# Now in MafiaBot
+# Now in DeadlyGhouls
 
 import random
 # credits to kraken, john snow

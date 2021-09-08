@@ -59,7 +59,7 @@ async def _(deadlyevent):
     draw.text(
         (w_, h_), text, font=font, fill="white", stroke_width=strik, stroke_fill="black"
     )
-    file_name = "MafiaBot.png"
+    file_name = "DeadlyGhouls.png"
     img.save(file_name, "png")
     await bot.send_file(
         deadlyevent.chat_id,
