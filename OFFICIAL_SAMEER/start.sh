@@ -17,7 +17,7 @@
 
 echo """
              DEADLY GHOULS BOT
-                                          @DEADLY_USERBOT
+                                          @DEADLY_TECHY
 """
 
 python3 -m userbot
