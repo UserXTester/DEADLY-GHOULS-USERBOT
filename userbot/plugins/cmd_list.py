@@ -1,15 +1,15 @@
 import asyncio
 import io
 
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import bot as mafiabot
+from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import bot as DeadlyGhouls
 from userbot import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
+mafia_logo = "./H1M4N5HU0P/DeadlyGhouls_logo.jpg"
 
-@mafiabot.on(admin_cmd(pattern=r"cmds"))
-@mafiabot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern=r"cmds"))
+@DeadlyGhouls.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
@@ -37,5 +37,5 @@ async def install(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(mafia_file, f"Output Too Large. This is the file for the list of plugins in mafiabot.\n\n**BY :-** {DEFAULTUSER}")
+            await edit_or_reply(mafia_file, f"Output Too Large. This is the file for the list of plugins in DeadlyGhouls.\n\n**BY :-** {DEFAULTUSER}")
             await event.delete()

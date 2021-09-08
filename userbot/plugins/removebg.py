@@ -3,9 +3,9 @@ import requests
 import PIL.ImageOps
 from PIL import Image, ImageDraw, ImageFont
 
-from mafiabot import CmdHelp
+from DeadlyGhouls import CmdHelp
 from userbot.Config import Config
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
    

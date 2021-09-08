@@ -18,43 +18,43 @@ from userbot.helpers.functions import (
     iphonex,
     lolice,
 )
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="mask$", outgoing=True))
 @bot.on(sudo_cmd(pattern="mask$", allow_sudo=True))
-async def _(mafiabot):
-    reply_message = await mafiabot.get_reply_message()
+async def _(DeadlyGhouls):
+    reply_message = await DeadlyGhouls.get_reply_message()
     if not reply_message.media or not reply_message:
-        await edit_or_reply(mafiabot, "```reply to media message```")
+        await edit_or_reply(DeadlyGhouls, "```reply to media message```")
         return
     chat = "@hazmat_suit_bot"
     if reply_message.sender.bot:
-        await edit_or_reply(mafiabot, "```Reply to actual users message.```")
+        await edit_or_reply(DeadlyGhouls, "```Reply to actual users message.```")
         return
-    event = await mafiabot.edit("```Processing```")
-    async with mafiabot.client.conversation(chat) as conv:
+    event = await DeadlyGhouls.edit("```Processing```")
+    async with DeadlyGhouls.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=905164246)
             )
-            await mafiabot.client.send_message(chat, reply_message)
+            await DeadlyGhouls.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await edit_or_reply(mafiabot, "`Please unblock` @hazmat_suit_bot `and try again`")
+            await edit_or_reply(DeadlyGhouls, "`Please unblock` @hazmat_suit_bot `and try again`")
             return
         if response.text.startswith("Forward"):
-            await edit_or_reply(mafiabot, "```can you kindly disable your forward privacy settings for good?```"
+            await edit_or_reply(DeadlyGhouls, "```can you kindly disable your forward privacy settings for good?```"
             )
         else:
-            await mafiabot.client.send_file(event.chat_id, response.message.media)
+            await DeadlyGhouls.client.send_file(event.chat_id, response.message.media)
             await event.delete()
 
 
 @bot.on(admin_cmd(pattern="awooify$", outgoing=True))
 @bot.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
-async def mafiabot(mafiamemes):
+async def DeadlyGhouls(mafiamemes):
     replied = await mafiamemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -105,7 +105,7 @@ async def mafiabot(mafiamemes):
 
 @bot.on(admin_cmd(pattern="lolice$"))
 @bot.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
-async def mafiabot(mafiamemes):
+async def DeadlyGhouls(mafiamemes):
     replied = await mafiamemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -156,7 +156,7 @@ async def mafiabot(mafiamemes):
 
 @bot.on(admin_cmd(pattern="bun$"))
 @bot.on(sudo_cmd(pattern="bun$", allow_sudo=True))
-async def mafiabot(mafiamemes):
+async def DeadlyGhouls(mafiamemes):
     replied = await mafiamemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
@@ -207,7 +207,7 @@ async def mafiabot(mafiamemes):
 
 @bot.on(admin_cmd(pattern="iphx$"))
 @bot.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
-async def mafiabot(mafiamemes):
+async def DeadlyGhouls(mafiamemes):
     replied = await mafiamemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)

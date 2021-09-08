@@ -6,8 +6,8 @@ from typing import Optional, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import PIL.ImageOps
 
-from mafiabot.utils import admin_cmd, sudo_cmd
-from userbot import CmdHelp, CMD_HELP, LOGS, bot as mafiabot
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd
+from userbot import CmdHelp, CMD_HELP, LOGS, bot as DeadlyGhouls
 from userbot.helpers.functions import (
     convert_toimage,
     convert_tosticker,
@@ -44,8 +44,8 @@ async def crop(imagefile, endname, x):
     inverted_image.save(endname)
 
 
-@mafiabot.on(admin_cmd(pattern="invert$", outgoing=True))
-@mafiabot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="invert$", outgoing=True))
+@DeadlyGhouls.on(sudo_cmd(pattern="invert$", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -128,8 +128,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="solarize$"))
-@mafiabot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="solarize$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -212,8 +212,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="mirror$"))
-@mafiabot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="mirror$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -296,8 +296,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="flip$"))
-@mafiabot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="flip$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="flip$", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -380,8 +380,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="gray$"))
-@mafiabot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="gray$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="gray$", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -464,8 +464,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return
@@ -555,8 +555,8 @@ async def memes(mafia):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
 async def memes(mafia):
     if mafia.fwd_from:
         return

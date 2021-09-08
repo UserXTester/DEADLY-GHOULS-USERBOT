@@ -4,7 +4,7 @@ from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import *
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"

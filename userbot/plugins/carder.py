@@ -6,12 +6,12 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from mafiabot import CmdHelp, bot as mafiabot
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
+from DeadlyGhouls import CmdHelp, bot as DeadlyGhouls
 
 
-@mafiabot.on(admin_cmd("gencc$"))
-@mafiabot.on(sudo_cmd("gencc$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd("gencc$"))
+@DeadlyGhouls.on(sudo_cmd("gencc$", allow_sudo=True))
 async def _(mafiaevent):
     if mafiaevent.fwd_from:
         return
@@ -23,8 +23,8 @@ async def _(mafiaevent):
     await edit_or_reply(mafiaevent, f"__**👤 NAME :- **__\n`{mafianame}`\n\n__**🏡 ADDRESS :- **__\n`{mafiaadre}`\n\n__**💸 CARD :- **__\n`{mafiacard}`")
     
 
-@mafiabot.on(admin_cmd(pattern="bin ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="bin ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -44,8 +44,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@mafiabot.on(admin_cmd(pattern="vbv ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="vbv ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -65,8 +65,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
     
     
-@mafiabot.on(admin_cmd(pattern="key ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="key ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -86,8 +86,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
  
   
-@mafiabot.on(admin_cmd(pattern="iban ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="iban ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -107,8 +107,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
     
-@mafiabot.on(admin_cmd(pattern="ccheck ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="ccheck ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -128,8 +128,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
              
              
-@mafiabot.on(admin_cmd(pattern="ccbin ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="ccbin ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 

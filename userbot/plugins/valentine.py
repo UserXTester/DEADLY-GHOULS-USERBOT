@@ -2,17 +2,17 @@ import asyncio
 import random
 from asyncio import sleep
 
-from mafiabot import CmdHelp, bot as mafiabot, ALIVE_NAME
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from DeadlyGhouls import CmdHelp, bot as DeadlyGhouls, ALIVE_NAME
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"
 
-h1m4n5hu0p = mafiabot.uid
+h1m4n5hu0p = DeadlyGhouls.uid
 
 mafia = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
 
-@mafiabot.on(admin_cmd(pattern="hvd$"))
-@mafiabot.on(sudo_cmd(pattern="hvd$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="hvd$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="hvd$", allow_sudo=True))
 async def love(event):
     if event.fwd_from:
         return
@@ -38,8 +38,8 @@ async def love(event):
     await event.edit("__**HAPPY VALENTINE'S DAY**__ [❤️](https://telegra.ph/file/4d51f6a5d98ba94ae2af7.jpg)", link_preview=True)
     
     
-@mafiabot.on(admin_cmd(pattern="vday$"))
-@mafiabot.on(sudo_cmd(pattern="vday$", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="vday$"))
+@DeadlyGhouls.on(sudo_cmd(pattern="vday$", allow_sudo=True))
 async def gif(event):
     if event.fwd_from:
         return

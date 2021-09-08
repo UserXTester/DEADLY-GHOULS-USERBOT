@@ -1,9 +1,9 @@
 import re
 
-from mafiabot import bot
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from mafiabot.cmdhelp import CmdHelp
-from mafiabot.helpers.functions import deEmojify
+from DeadlyGhouls import bot
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
+from DeadlyGhouls.cmdhelp import CmdHelp
+from DeadlyGhouls.helpers.functions import deEmojify
 
 
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))

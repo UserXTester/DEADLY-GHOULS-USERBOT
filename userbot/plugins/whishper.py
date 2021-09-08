@@ -1,6 +1,6 @@
 # Made by @Kraken_The_BadASS for @mafiaBot_Official
 
-from mafiabot.utils import *
+from DeadlyGhouls.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

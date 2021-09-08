@@ -1,7 +1,7 @@
 import time
 
 from userbot import ALIVE_NAME, StartTime, mafiaversion
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon import events, version
 
 async def reply_id(event):

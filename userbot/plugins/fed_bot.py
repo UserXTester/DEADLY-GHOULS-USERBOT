@@ -12,10 +12,10 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon import functions, types, events
-from mafiabot import CmdHelp, bot as mafiabot
-from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
-from mafiabot.Config import Config
-from mafiabot.plugins.sql_helper.fban_sql import (
+from DeadlyGhouls import CmdHelp, bot as DeadlyGhouls
+from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from DeadlyGhouls.Config import Config
+from DeadlyGhouls.plugins.sql_helper.fban_sql import (
     add_channel,
     get_all_channels,
     in_channels,
@@ -24,14 +24,14 @@ from mafiabot.plugins.sql_helper.fban_sql import (
 
 logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
-mafia_logo = "./H1M4N5HU0P/mafiabot_logo.jpg"
+mafia_logo = "./H1M4N5HU0P/DeadlyGhouls_logo.jpg"
 # Keep all credits pls
 # madewith great effort by @HeisenbergTheDanger
 # modified by @kraken_the_badass for fbans
 
 
-@mafiabot.on(admin_cmd(pattern="fban ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="fban ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="fban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,8 +144,8 @@ async def _(event):
                 except BaseException:
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")# Written by @HeisenbergTheDanger
 
-@mafiabot.on(admin_cmd(pattern="unfban ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="unfban ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="unfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -259,8 +259,8 @@ async def _(event):
                     await mssg.edit("Set up heroku var `FBAN_LOGGER_GROUP` for checking errors.")
 
 
-@mafiabot.on(admin_cmd(pattern=r"fadd ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern=r"fadd ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern=r"fadd ?(.*)", allow_sudo=True))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -300,8 +300,8 @@ async def add_ch(event):
         await event.delete()
 
 
-@mafiabot.on(admin_cmd(pattern=r"fremove ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern=r"fremove ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern=r"fremove ?(.*)", allow_sudo=True))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -329,8 +329,8 @@ async def remove_ch(event):
         await event.delete()
 
 
-@mafiabot.on(admin_cmd(pattern="fgroups"))
-@mafiabot.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="fgroups"))
+@DeadlyGhouls.on(sudo_cmd(pattern="fgroups", allow_sudo=True))
 async def list(event):
     if event.fwd_from:
         return
@@ -356,8 +356,8 @@ async def list(event):
         await eor(event, msg)
 
 
-@mafiabot.on(admin_cmd(pattern="fsearch ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="fsearch ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="fsearch ?(.*)", allow_sudo=True))
 async def search(event):
     if event.fwd_from:
         return
@@ -377,8 +377,8 @@ async def search(event):
 
 #----------------------------------------------------------------------------------------------------------------------------------------------
 
-@mafiabot.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
-@mafiabot.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="newfed ?(.*)", outgoing=True))
+@DeadlyGhouls.on(sudo_cmd(pattern="newfed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -403,8 +403,8 @@ async def _(event):
             await eor(event, f"{response.message.message}")
 
 
-@mafiabot.on(admin_cmd(pattern="renamefed ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="renamefed ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="renamefed ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -424,8 +424,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@mafiabot.on(admin_cmd(pattern="fstat ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="fstat ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="fstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -454,7 +454,7 @@ async def _(event):
                     await massive.click(0)
                     await asyncio.sleep(2)
                     massive = await conv.get_response()
-                    await mafiabot.send_file(
+                    await DeadlyGhouls.send_file(
                         event.chat_id,
                         massive,
                         thumb=thumb,
@@ -467,8 +467,8 @@ async def _(event):
                 await mafia.edit("`Please Unblock` @MissRose_Bot")
 
 
-@mafiabot.on(admin_cmd(pattern="fedinfo ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
+@DeadlyGhouls.on(admin_cmd(pattern="fedinfo ?(.*)"))
+@DeadlyGhouls.on(sudo_cmd(pattern="fedinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

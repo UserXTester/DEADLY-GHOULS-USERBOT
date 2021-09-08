@@ -14,8 +14,8 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                    ChatBannedRights,
                                      MessageEntityMentionName,
                                        MessageMediaPhoto)
-from mafiabot.utils import register, errors_handler
-from mafiabot.utils import admin_cmd
+from DeadlyGhouls.utils import register, errors_handler
+from DeadlyGhouls.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
 

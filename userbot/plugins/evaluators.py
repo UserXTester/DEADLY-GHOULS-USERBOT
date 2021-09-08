@@ -6,7 +6,7 @@ import os
 import sys
 import traceback
 
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
@@ -28,7 +28,7 @@ async def _(event):
     if mafiauser.username:
         curruser = mafiauser.username
     else:
-        curruser = "mafiabot"
+        curruser = "DeadlyGhouls"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"

@@ -2,12 +2,12 @@
 
 from userbot import *
 from userbot import CMD_HELP
-from mafiabot.utils import *
+from DeadlyGhouls.utils import *
 
 
 @bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
-async def mafiabott(event):
+async def DeadlyGhoulst(event):
     if event.fwd_from:
         return
     """ .plinfo cmd """
