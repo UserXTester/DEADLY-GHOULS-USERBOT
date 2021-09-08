@@ -15,13 +15,13 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "please check out to an official branch, and re-start the updater."
 )
 OFFICIAL_UPSTREAM_REPO = Config.UPSTREAM_REPO
-BOT_IS_UP_TO_DATE = "**The DᴇᴀᴅʟʏGʜᴏᴜʟs** is up-to-date sur."
+BOT_IS_UP_TO_DATE = "**The ∂єα∂ℓу gнσυℓѕ** is up-to-date sur."
 NEW_BOT_UP_DATE_FOUND = (
     "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
-    "updating your DᴇᴀᴅʟʏGʜᴏᴜʟs ..."
+    "updating your ∂єα∂ℓу gнσυℓѕ ..."
 )
-NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your DᴇᴀᴅʟʏGʜᴏᴜʟs...`"
+NEW_UP_DATE_FOUND = "New update found for {branch_name}\n" "`updating your ∂єα∂ℓу gнσυℓѕ...`"
 REPO_REMOTE_NAME = "temponame"
 IFFUCI_ACTIVE_BRANCH_NAME = "master"
 DIFF_MARKER = "HEAD..{remote_name}/{branch_name}"
@@ -137,7 +137,7 @@ def generate_change_log(git_repo, diff_marker):
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "Updated your DᴇᴀᴅʟʏGʜᴏᴜʟs successfully sur!!!\nNow type `.ping` after 5 mins to check if I'm on🚶😏"
+        "Updated your ∂єα∂ℓу gнσυℓѕ successfully sur!!!\nNow type `.ping` after 5 mins to check if I'm on🚶😏"
     )
     await remote.push(refspec=refspec)
     await tgbot.disconnect()

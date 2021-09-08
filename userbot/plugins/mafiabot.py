@@ -65,7 +65,7 @@ async def amireallyalive(alive):
         deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         deadly_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
         deadly_caption += f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-        deadly_caption += f"**★ DᴇᴀᴅʟʏGʜᴏᴜʟs :**`{deadlyversion}`\n"
+        deadly_caption += f"**★ ∂єα∂ℓу gнσυℓѕ :**`{deadlyversion}`\n"
         deadly_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
         deadly_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
         await alive.client.send_file(
@@ -79,7 +79,7 @@ async def amireallyalive(alive):
             f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ \n"
             f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
             f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-            f"**★ DᴇᴀᴅʟʏGʜᴏᴜʟs :** `{deadlyversion}`\n"
+            f"**★ ∂єα∂ℓу gнσυℓѕ :** `{deadlyversion}`\n"
             f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
             f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n",
         )
