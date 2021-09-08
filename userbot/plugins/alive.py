@@ -36,7 +36,7 @@ pm_caption += f"┣•➳➠ `Channel:` [ᴊᴏɪɴ](https://t.me/DEADLY_USERBOT
 pm_caption += f"┣•➳➠ `Creator:` [Himanshu](https://t.me/OFFICIAL_SAMEER)\n"
 pm_caption += f"┣•➳➠ `Supporter:` [HellBoy](https://t.me/kraken_the_badass)\n"
 pm_caption += f"┗━━━━━━━━━━━━━━━━━━━\n"
-pm_caption += " [🔥REPO🔥](https://github.com/DeadlyGhoulsOP/DeadlyGhouls) 🔹 [📜License📜](https://github.com/DeadlyGhoulsOP/DeadlyGhouls/blob/main/LICENSE)"
+pm_caption += " [🔥REPO🔥](https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT) 🔹 [📜License📜](https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT/blob/main/LICENSE)"
 
 # @command(outgoing=True, pattern="^.alive$")
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
