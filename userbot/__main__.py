@@ -53,7 +53,7 @@ for name in files:
 
 import userbot._core
 
-print(f"""CONGRATULATIONS 🥳🥳🎊🎊 YOUR DEADLY GHOULS BOT IS DEPLOYED 🎊 ... NOW TYPE .ping OR .alive TO CHECK OUR AMAZING BOT 🥳🔥 IF U HAVE ANY PROBLEM THEN JOIN @DEADLY_USERBOT""")
+print(f"""CONGRATULATIONS 🥳🥳🎊🎊 YOUR DEADLY GHOULS BOT IS DEPLOYED 🎊 ... NOW TYPE .ping OR .alive TO CHECK OUR AMAZING BOT 🥳🔥 IF U HAVE ANY PROBLEM THEN JOIN @DEADLY_TECHY""")
 async def deadly_is_on():
     try:
         if Config.PM_LOGGR_BOT_API_ID != 0:
