@@ -1,126 +1,86 @@
 <h3 align="center">𝚃𝙷𝙴 𝙲𝙻𝙾𝙽𝙴 𝙾𝙵</h3>
-<h2 align="center"> <a href="https://github.com/OFFICIAL_SAMEER/MAFIA-USERBOT">🔥 𝚃𝙷𝙴 DeadlyGhouls 🔥</a></h2>
+<h1 align="center">
+<b>𝐃𝐄𝐀𝐃𝐋𝐘 𝐆𝐇𝐎𝐔𝐋𝐒 𝐔𝐒𝐄𝐑𝐁𝐎𝐓 {🇮🇳}</b>
+</h1>
+<p align="center">
+  <img src="https://telegra.ph/file/c5148795f46fb78bab9b9.jpg" alt="The DEADLY BOT">
+            
+𝙱𝙴𝚂𝚃  𝙰𝙽𝙳  𝙼𝙾𝚂𝚃  𝙰𝚆𝙰𝙸𝚃𝙴𝙳  𝚄𝚂𝙴𝚁𝙱𝙾𝚃  𝚃𝙾  𝙼𝙰𝙽𝙰𝙶𝙴  𝚈𝙾𝚄𝚁  𝙰𝙲𝙲𝙾𝚄𝙽𝚃 𝚆𝙸𝚃𝙷 𝙻𝚄𝚇𝚄𝚁𝙸𝙾𝚄𝚂 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂 𝙲𝙾𝙼𝙿𝙰𝚁𝙴𝙳 𝚃𝙾 𝙰𝙽𝚈 𝙾𝚃𝙷𝙴𝚁 𝙱𝙾𝚃𝚂..𝙰𝙻𝚂𝙾 𝚆𝙸𝚃𝙷 𝚂𝙴𝙲𝚄𝚁𝚄𝚃𝚈 𝙵𝙴𝙰𝚃𝚄𝚁𝙴𝚂 </p>
+
+-----              
+
+## Status Of Bot 
+
+<p align="left"><a href="https://github.com/sameerpanthi/deadly-kaal-bot/network/members"><img src="https://img.shields.io/github/forks/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/stargazers"><img src="https://img.shields.io/github/stars/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT"></a><p align="left"><a href="https://github.com/DEADLY-FIGHTERS/DEADLY-BOT?"></
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT?utm_source=github.com&utm_medium=referral&utm_content=DEADLY-FIGHTERS/DEADLY-GHOULS-BOT&utm_campaign=Badge_Grade_Settings)
+[![Size](https://img.shields.io/github/repo-size/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT?style=flat-square&color=green)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/)   
+[![Python](https://img.shields.io/badge/Python-v3.9-blue)](https://www.python.org/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/graphs/commit-activity)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT)   
+[![Contributors](https://img.shields.io/github/contributors/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT?style=flat-square&color=green)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/DEADLY-FIGHTERS/DEADLY-BOT/blob/main/LICENSE)
+
+------
+
+## 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 :
+
+- <a href="https://t.me/DEADLY_USERBOT"><img src="https://img.shields.io/badge/Join-SUPPORT%20GROUP-red.svg?logo=Telegram"></a>
+- <a href="https://t.me/deadly_techy"><img src="https://img.shields.io/badge/Join-SUPPORT%20CHANNEL-red.svg?logo=Telegram"></a>
+
+-------------------------------------------------
+
+## 𝙳𝙴𝙿𝙻𝙾𝚈  🚀
+
+[![Deploy](https://telegra.ph/file/0eb22051107b293466d50.jpg)](https://heroku.com/deploy?template=https://github.com/DEADLY-FIGHTERS/DEADLY-GHOuls-bot)
+               
+------------------------------------------------
+## 𝚁𝙴𝙿𝙻 :                
+
+- Open Repl Link.
+- Click on Green Play Button.
+- Wait for requirements to finish.
+- Fill API ID, API HASH, Phone number (with country code).
+- Paste the OTP received on Telegram.
+- If You have Enabled 2-Step Verification then fill your password.
+- Your Deadly Bot Session Will be saved in your Telegram Saved Message.
+
+[![repl]()](https://replit.com/@sameerpanthi/DEADLY-FIGHTERS-BOT#main.py)
+    
+-------------------------------------------------
+## 𝚅𝙰𝚁𝙸𝙰𝙱𝙻𝙴𝚂 :
+                            
+- `APP_ID`  =  Get this value from my.telegram.org
+- `API_HASH`  =  Get this value from my.telegram.org
+- `STRING_SESSION`  =  Get this by using [Repl.it](https://replit.com/@sameerpanthi/DEADLY-FIGHTERS-BOT#main.py)
+- `LOGGER_ID`  =  Make A Private Grp And @Missrose_bot Then type /id.
+- `BOT_TOKEN`  =  Make A Bot From [@BotFather](https://t.me/botfather) and paste it's token.
+- `BOT_USERNAME`  =  Get the username of that Bot made from [@Botfather](https://t.me/botfather)
+------------
+# 𝙲𝚁𝙴𝙳𝙸𝚃𝚂 - 
+
+1) 𝙾𝚆𝙽𝙴𝚁 - [𝙰𝙼𝙰𝙽](t.me/idanishbaba)
+2) 𝙾𝚆𝙽𝙴𝚁 - [Gʜᴏᴜʟs]()
+3) 𝙲𝚁𝙴𝙰𝚃𝙾𝚁 - [𝚂𝙰𝙼𝙴𝙴𝚁](t.me/official_sameer)
+
+------
+                                                                                             
+## 𝙳𝙸𝚂𝙲𝙻𝙰𝙸𝙼𝙴𝚁 
 
 
-<h1 align="center">⚡ 𝙼𝙰𝙵𝙸𝙰 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ⚡</h1>
+- We won't be responsible for any kind of ban due to this bot.
+- Dᴇᴀᴅʟʏ Gʜᴏᴜʟs Bᴏᴛ was made for fun purpose and to make group management easier.
+- It's your concern if you spam and gets your account banned.
+- Also, Forks won't be entertained.
+- If you fork this repo and edit plugins, it's your concern for further updates.
+- Forking Repo is fine. But if you edit something we will not provide any help.
+- In short, Fork At Your Own Risk.
 
 
-[![MAFIA LOGO](https://telegra.ph/file/b61486075c6ef73dd0d12.jpg)](https://t.me/DEADLY_TECHY)
 
-
-<h2 align="center">The owner would not be responsible for any kind of bans due to the bot.</h2>
-
-
-# FORK AT YOUR OWN RISK
-
-<details>
-
-  <summary> • INSTALLING • </summary>
-
-### The Easy Way
-
-<h4>⚜️ DEPLOY TO HEROKU ⚜️</h4>
-
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FDeadlyGhoulsOP%2FDeadlyGhouls&template=https%3A%2F%2Fgithub.com%2FDeadlyGhoulsOP%2FDeadlyGhouls" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
-
-<h2 align="center"> <a href="https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT">⚡ 𝚃𝙷𝙴 DeadlyGhouls ⚡</a></h2>
-
-</details>
-
-<details>
-  <summary> <h4>Credits 🏅</h4> </summary>
-
-• [JaaduBot](https://github.com/Amberyt/JaaduBot)
-
-• [Uniborg](https://github.com/spechide/uniborg)
-
-• [Hêllẞø†](https://github.com/thevaders/vader)
-
-• [Kittu](https://t.me/A_viyu)
-
-</details>
-<details>
-  <summary> <h4>Official Supports ✅</h4> </summary>
-
-```
-Get help regarding setting up 
-your DeadlyGhouls in our official 
-support Group and get updates
-notifications in Update Channel.
-```
-
-<a href="https://t.me/DEADLY_TECHY"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
-
-</details>
-
-<h1 align="center">⚙️ Set-Up ⚙️</h1>
-
-<details>
-  <summary> <h2>Generate String Session</h2> </summary>
-
-- Termux
-    - Clone `git clone https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT.git`
-    - Then Do  `cd MAFIA-BOT`
-    - Run String Generator By
-           `bash string.sh`
-    - Then Fill The Required Details.
-    - API ID, API HASH, PHONE NUMBER (WITH COUNTRY CODE)
- 
-- Repl Run
-    - Click [Here](https://replit.com/@OFFICIAL_SAMEER/DeadlyGhouls#main.py) to open Repl run.
-    - Click On Green Play Button.
-    - Wait for a while then fill the details.
-    - String will be saved in your Saved Message.
-</details>
-
-<details>
-  <summary> <h3>HOSTING 😉</h3> </summary>
-
-- Choose A Hosting Site. And fill the mandatory vars.
-
-## Deploys
-
-- You Can Deploy it on 
-    - [Zeet](https://zeet.co/new)
-    - [Uffizzi](https://uffizzi.com)
-    - Any Other VPS.
-    - No support for Termux Yet.
-
-## Mandatory Vars
-
-- Some of the environment variables are mandatory.
-- These are listed below.
-    - `APP_ID`:   You can get this value from [here](https://my.telegram.org)
-    - `API_HASH`:   You can get this value from [here](https://my.telegram.org)
-    - `ENV`:   `ANYTHING`
-    - `STRING_SESSION`:   You can get this value from running `python3 string_session.py` in termux after cloning this repo. Or just using [repl run](https://replit.com/@OFFICIAL_SAMEER/DeadlyGhouls#main.py)
-    - `LOG_GROUP`:   Make a Channel Or Group and get it's id.
-    - `DATABASE_URL`:   Make a database on elephant sql and paste the url.
-    - `DB_URI`:   Same as `DATABASE_URL`
-    - `BOT_TOKEN`:   Make a Bot from [Botfather](https://t.me/botfather) and paste the bot token here.
-    - `BOT_USERNAME`:   Paste the Username of bot that you made from [BotFather](https://t.me/botfather).
-- The userbot will not work without setting the mandatory vars.
-
-</details>
-
-<details>
-  <summary> <h4>• LICENSE •</h4> </summary>
-
-![](https://www.gnu.org/graphics/gplv3-or-later.png)
-
-Copyright (C) 2021 OFFICIAL_SAMEER
-
-Poject [DeadlyGhouls](https://github.com/Deadly-fighters/DEADLY-GHOULS-BOT) is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
-
-</details>
+# credits
+               
+1) 𝙾𝙿 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 - [𝗠𝗔𝗙𝗜𝗔 𝗕𝗢𝗧](https://github.com/MafiaBotOP/MafiaBot)
+2) 𝙼𝚈 𝙿𝚁𝙾 𝙱𝚁𝙾 - [𝗛𝗜𝗠𝗔𝗡𝗦𝗛𝗨](t.me/H1M4N5HU0P)
+3) Mʏ Bʀᴏᴛʜᴇʀ  - [𝗞𝗥𝗜𝗦𝗛](t.me/D3_krish)
