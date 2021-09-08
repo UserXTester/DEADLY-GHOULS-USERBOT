@@ -33,7 +33,7 @@ async def _(event):
         await edit_or_reply(event, "**SAVING OUTPUT TO MAFIABOT LOCAL DATABASE**")
         await asyncio.sleep(3.5)
         await edit_or_reply(event, 
-            "Your[DeadlyGhouls](https:/t.me/DEADLY_USERBOT) is working Fine...\n       Join @DeadlyGhouls_Chit_Chat For Any Help......"
+            "Your[DeadlyGhouls](https:/t.me/DEADLY_TECHY) is working Fine...\n       Join @DeadlyGhouls_Chit_Chat For Any Help......"
         )
 
 CmdHelp("test").add_command(

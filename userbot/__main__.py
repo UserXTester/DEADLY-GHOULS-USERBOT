@@ -53,14 +53,14 @@ for name in files:
 
 import userbot._core
 
-print(f"""MAFIABOT IS ON!!! MAFIABOT VERSION :- {deadlyversion} YOUR ∂єα∂ℓу gнσυℓѕ IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @DEADLY_USERBOT .""")
+print(f"""MAFIABOT IS ON!!! MAFIABOT VERSION :- {deadlyversion} YOUR ∂єα∂ℓу gнσυℓѕ IS READY TO USE! FOR CHECK YOUR BOT WORKING OR NOT PLEASE TYPE (.alive/.ping) ENJOY YOUR BOT! JOIN FOR MORE FUTURE UPDATES @DEADLY_TECHY .""")
 async def deadly_is_on():
     try:
         if Config.PM_LOGGR_BOT_API_ID != 0:
             await bot.send_file(
                 Config.PM_LOGGR_BOT_API_ID,
                 DEADLY_GHOULS_PIC,
-                caption=f"༆ʟɛɢɛռɖaʀʏ ᴀғ ∂єα∂ℓу gнσυℓѕ༆\n\n**𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➪ {deadlyversion}**\n\n𝐓𝐲𝐩𝐞 `.ping` or `.alive` 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤! \n\n𝙹𝙾𝙸𝙽 [DeadlyGhouls 𝙲𝙷𝙰𝚃](t.me/MAFIABOT_CHIT_CHAT) 𝚃𝙾 𝚀𝚄𝙴𝚁𝚈 & 𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰 𝚄𝙿𝙳𝙰𝚃𝙴𝚂](t.me/DEADLY_USERBOT) 𝚃𝙾 𝙺𝙽𝙾𝚆 𝚁𝙴𝙶𝚁𝙰𝙳𝙸𝙽𝙶 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙽𝙴𝚆𝚂 𝙰𝙱𝙾𝚄𝚃 DeadlyGhouls",
+                caption=f"༆ʟɛɢɛռɖaʀʏ ᴀғ ∂єα∂ℓу gнσυℓѕ༆\n\n**𝚅𝙴𝚁𝚂𝙸𝙾𝙽 ➪ {deadlyversion}**\n\n𝐓𝐲𝐩𝐞 `.ping` or `.alive` 𝐭𝐨 𝐜𝐡𝐞𝐜𝐤! \n\n𝙹𝙾𝙸𝙽 [DeadlyGhouls 𝙲𝙷𝙰𝚃](t.me/MAFIABOT_CHIT_CHAT) 𝚃𝙾 𝚀𝚄𝙴𝚁𝚈 & 𝙹𝙾𝙸𝙽 [𝙼𝙰𝙵𝙸𝙰 𝚄𝙿𝙳𝙰𝚃𝙴𝚂](t.me/DEADLY_TECHY) 𝚃𝙾 𝙺𝙽𝙾𝚆 𝚁𝙴𝙶𝚁𝙰𝙳𝙸𝙽𝙶 𝚄𝙿𝙳𝙰𝚃𝙴 𝙰𝙽𝙳 𝙽𝙴𝚆𝚂 𝙰𝙱𝙾𝚄𝚃 DeadlyGhouls",
             )
     except Exception as e:
         LOGS.info(str(e))

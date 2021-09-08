@@ -75,7 +75,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@DEADLY_USERBOT":
+        if event.query.user_id == bot.uid and query == "@DEADLY_TECHY":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
@@ -94,11 +94,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         elif event.text=='':
             result = builder.article(
-                "@DEADLY_USERBOT",
-                text="""**Hey! This is [DeadlyGhouls.](https://t.me/DEADLY_USERBOT) \nYou can know more about me from the links given below 👇**""",
+                "@DEADLY_TECHY",
+                text="""**Hey! This is [DeadlyGhouls.](https://t.me/DEADLY_TECHY) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/DEADLY_USERBOT"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/DEADLY_TECHY"),
                         custom.Button.url(
                             "⚡ GROUP ⚡", "https://t.me/DeadlyGhouls_Chit_Chat"
                         ),
@@ -127,7 +127,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Legenday AF** [DeadlyGhouls](https://t.me/DEADLY_USERBOT) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
+            f"**Legenday AF** [DeadlyGhouls](https://t.me/DEADLY_TECHY) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=False,
         )
@@ -136,7 +136,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
             await delete_deadly(event,
-              "⚜️DeadlyGhouls Menu Provider Is now Closed⚜️\n\n         **[© DeadlyGhouls ™](t.me/DEADLY_USERBOT)**", 5, link_preview=False
+              "⚜️DeadlyGhouls Menu Provider Is now Closed⚜️\n\n         **[© DeadlyGhouls ™](t.me/DEADLY_TECHY)**", 5, link_preview=False
             )
         else:
             deadly_alert = "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © DeadlyGhouls ™"

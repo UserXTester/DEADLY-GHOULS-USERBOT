@@ -24,7 +24,7 @@ echo """
            ║║║║║║╔═╗║║──╔╣╠╣╔═╗║╚═╝║╚═╝║─║║
            ╚╝╚╝╚╩╝─╚╩╝──╚══╩╝─╚╩═══╩═══╝─╚╝
                      © 𝙻𝙴𝙶𝙴𝙽𝙳𝙰𝚁𝚈_𝙰𝙵_DeadlyGhouls™                       
-                         @DEADLY_USERBOT
+                         @DEADLY_TECHY
 """
 
 python3 string_session.py

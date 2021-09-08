@@ -5,7 +5,7 @@
 <h1 align="center">⚡ 𝙼𝙰𝙵𝙸𝙰 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 ⚡</h1>
 
 
-[![MAFIA LOGO](https://telegra.ph/file/b61486075c6ef73dd0d12.jpg)](https://t.me/DEADLY_USERBOT)
+[![MAFIA LOGO](https://telegra.ph/file/b61486075c6ef73dd0d12.jpg)](https://t.me/DEADLY_TECHY)
 
 
 <h2 align="center">The owner would not be responsible for any kind of bans due to the bot.</h2>
@@ -49,7 +49,7 @@ support Group and get updates
 notifications in Update Channel.
 ```
 
-<a href="https://t.me/DEADLY_USERBOT"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/DEADLY_TECHY"><img src="https://img.shields.io/badge/Join-Support%20Channel-red.svg?style=for-the-badge&logo=Telegram"></a>
 
 </details>
 
