@@ -61,28 +61,32 @@ async def amireallyalive(alive):
     reply_to_id = await reply_id(alive)
 
     if DEADLY_GHOULS_IMG:
-        deadly_caption = f"🔥 ℓєgєη∂яу αƒ ∂єα∂ℓу кααℓ 🔥\n\n"
+        deadly_caption = f"🔥 ℓєgєη∂яу αƒ ∂єα∂ℓу gнσυℓѕ 🔥\n\n"
         deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n\n"
-        deadly_caption += f"**{Config.ALIVE_MSG}**\n\n"
+        deadly_caption += f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n\n"                
         deadly_caption += f"𖣘 𝙰𝙱𝙾𝚄𝚃 𝙼𝚈 𝚂𝚈𝚂𝚃𝙴𝙼 𖣘\n\n"
         deadly_caption += f"➾ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽` ➣ `{tel_ver}` \n"
         deadly_caption += f"➾ `𝚂𝚄𝙳𝙾 𝙼𝙾𝙳𝙴:` ➣ `{is_sudo}`\n"
         deadly_caption += f"➾ 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: ➣ [𝙹𝙾𝙸𝙽](t.me/Config.YOUR_CHANNEL)\n"
         deadly_caption += f"➾ 𝙼𝚈 𝙶𝚁𝙾𝚄𝙿: ➣ [𝙹𝙾𝙸𝙽](t.me/Config.YOUR_GROUP)\n\n"
-        deadly_caption += f"[✨ 𝙳𝙴𝙿𝙻𝙾𝚈 𝚈𝙾𝚄𝚁 𝙳𝙴𝙰𝙳𝙻𝚈 𝙺𝙰𝙰𝙻 ✨](https://github.com/DEADLY-FIGHTERS/DEADLY-KAAL-BOT)\n" 
-                                      await alive.client.send_file(
+        deadly_caption += f"[✨ 𝙳𝙴𝙿𝙻𝙾𝚈 𝚈𝙾𝚄𝚁 𝙳𝙴𝙰𝙳𝙻𝚈 𝙶𝙷𝙾𝚄𝙻𝚂 ✨](https://github.com/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT)\n" 
+        await alive.client.send_file(
             alive.chat_id, DEADLY_GHOULS_IMG, caption=deadly_caption, reply_to=reply_to_id
-        )
+        )                  
         await alive.delete()
     else:
         await edit_or_reply(
             alive,
+            f"🔥 ℓєgєη∂яу αƒ ∂єα∂ℓу gнσυℓѕ 🔥\n\n"
+            f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n\n"
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
-            f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ \n"
-            f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
-            f"**★ 𝕋𝕖𝕝𝕖𝕥𝕙𝕠𝕟 𝕧𝕖𝕣𝕤𝕚𝕠𝕟 :** `{version.__version__}`\n"
-            f"**★ ∂єα∂ℓу gнσυℓѕ :** `{deadlyversion}`\n"
-            f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
-            f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n",
+            f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n\n"                
+            f"𖣘 𝙰𝙱𝙾𝚄𝚃 𝙼𝚈 𝚂𝚈𝚂𝚃𝙴𝙼 𖣘\n\n"
+            f"➾ `𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽` ➣ `{tel_ver}` \n"
+            f"➾ `𝚂𝚄𝙳𝙾 𝙼𝙾𝙳𝙴:` ➣ `{is_sudo}`\n"
+            f"➾ 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: ➣ [𝙹𝙾𝙸𝙽](t.me/Config.YOUR_CHANNEL)\n"
+            f"➾ 𝙼𝚈 𝙶𝚁𝙾𝚄𝙿: ➣ [𝙹𝙾𝙸𝙽](t.me/Config.YOUR_GROUP)\n\n"
+            f"[✨ 𝙳𝙴𝙿𝙻𝙾𝚈 𝚈𝙾𝚄𝚁 𝙳𝙴𝙰𝙳𝙻𝚈 𝙶𝙷𝙾𝚄𝙻𝚂 ✨](https://github.com/DEADLY-FIGHTERS/DEADLY-GHOULS-BOT)\n" 
+           
         )
