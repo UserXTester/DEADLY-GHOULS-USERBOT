@@ -24,7 +24,7 @@ from DeadlyGhouls.plugins.sql_helper.fban_sql import (
 
 logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
-mafia_logo = "./H1M4N5HU0P/DeadlyGhouls_logo.jpg"
+mafia_logo = "./OFFICIAL_SAMEER/DeadlyGhouls_logo.jpg"
 # Keep all credits pls
 # madewith great effort by @HeisenbergTheDanger
 # modified by @kraken_the_badass for fbans

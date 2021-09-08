@@ -70,5 +70,5 @@ async def _(event):
         await edit_or_reply(event, traceback.format_exc())
 
 CmdHelp("screenshot").add_command(
-  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/H1M4N5HU0P/MAFIABOT"
+  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/OFFICIAL_SAMEER/MAFIABOT"
 ).add()

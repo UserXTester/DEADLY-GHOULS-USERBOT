@@ -1,5 +1,5 @@
 #!/bin/bash
-#   Copyright (C) 2021 H1M4N5HU0P
+#   Copyright (C) 2021 OFFICIAL_SAMEER
 #
 #   Poject MAFIABOT is free software: 
 #   you can redistribute it and/or modify it under the terms of the GNU General Public License 

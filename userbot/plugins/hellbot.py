@@ -2,7 +2,7 @@
 
 """Plugin for HellBot Repo
 
-\nCode by @H1M4N5HU0P
+\nCode by @OFFICIAL_SAMEER
 
 type '.hellbot' to get HellBot repo
 """

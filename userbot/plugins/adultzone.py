@@ -1,5 +1,5 @@
 # credits to userge
-# ported to MafiaBot by @H1M4N5HU0P
+# ported to MafiaBot by @OFFICIAL_SAMEER
 # will be adding more soon
 
 import asyncio

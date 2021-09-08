@@ -1,7 +1,7 @@
 # Plugin to show the feds you are banned in.
 # Kangers keep credits
 # By @Surv_ivor
-# fixed some issues by @H1M4N5HU0P
+# fixed some issues by @OFFICIAL_SAMEER
 
 import os
 import asyncio
@@ -363,7 +363,7 @@ async def _(event):
             or FBAN == "@HeisenbergTheDanger"
             or FBAN == "@xditya"
             or FBAN == "@Bhomik16"
-            or FBAN == "@H1M4N5HU0P"
+            or FBAN == "@OFFICIAL_SAMEER"
             or FBAN == "@Pacifist_Op"
     
         ):
