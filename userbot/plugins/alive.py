@@ -21,7 +21,7 @@ else:
 
 deadly = bot.uid
 
-MAFIA_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/c5148795f46fb78bab9b9.jpg"
+DEADLY_GHOULS_IMG = Config.ALIVE_PIC or "https://telegra.ph/file/c5148795f46fb78bab9b9.jpg"
 pm_caption = "  __**🔥🔥∂єα∂ℓу gнσυℓѕ 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄🔥🔥**__\n\n"
 
 pm_caption += f"**━━━━━━━━━━━━━━━━━━━━**\n\n"
@@ -44,7 +44,7 @@ pm_caption += " [🔥REPO🔥](https://github.com/Deadly-fighters/DEADLY-GHOULS-
 async def amireallyalive(alive):
     await alive.get_chat()   
     await alive.delete()
-    on = await borg.send_file(alive.chat_id, MAFIA_IMG,caption=pm_caption)
+    on = await borg.send_file(alive.chat_id, DEADLY_GHOULS_IMG,caption=pm_caption)
 
     
 CmdHelp("alive").add_command(

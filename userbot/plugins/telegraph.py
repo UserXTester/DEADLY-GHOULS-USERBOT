@@ -8,7 +8,7 @@ from userbot import ALIVE_NAME
 from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
+DEADLY_GHOULS_NAME = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 
 official_sameer = bot.uid
 
@@ -62,7 +62,7 @@ async def _(event):
                 os.remove(downloaded_file_name)
                 await edit_or_reply(event, 
                    "✓ **YOUR FILE :-** https://telegra.ph{} \n✓ **Time Taken :-** `{}` secs \n✓ **By :- [{}](tg://user?id={})**".format(
-                        media_urls[0], (ms + ms_two), MAFIA_NAME, official_sameer
+                        media_urls[0], (ms + ms_two), DEADLY_GHOULS_NAME, official_sameer
                     ),
                     link_preview=True,
                 )
@@ -91,7 +91,7 @@ async def _(event):
             ms = (end - start).seconds
             himanshu = f"https://telegra.ph/{response['path']}"
             await edit_or_reply(event, 
-                  f"✓ **Pasted to** [telegraph]({himanshu}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{MAFIA_NAME}](tg://user?id={official_sameer})", link_preview=True)
+                  f"✓ **Pasted to** [telegraph]({himanshu}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{DEADLY_GHOULS_NAME}](tg://user?id={official_sameer})", link_preview=True)
     else:
         await edit_or_reply(event, 
             "Reply to a message to get a permanent telegra.ph link."

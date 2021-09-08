@@ -14,7 +14,7 @@ async def reply_id(event):
 
 
 DEFAULTUSER = ALIVE_NAME or "DeadlyGhouls User"
-MAFIA_IMG = Config.ALIVE_PIC
+DEADLY_GHOULS_IMG = Config.ALIVE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝕃𝕖𝕘𝕖𝕟𝕕𝕒𝕣𝕪_𝔸𝔽_𝕄𝕒𝕗𝕚𝕒𝔹𝕠𝕥"
 
 USERID = bot.uid
@@ -60,7 +60,7 @@ async def amireallyalive(alive):
         return
     reply_to_id = await reply_id(alive)
 
-    if MAFIA_IMG:
+    if DEADLY_GHOULS_IMG:
         deadly_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         deadly_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         deadly_caption += f"__**𝔹𝕆𝕋 𝕊𝕋𝔸𝕋𝕌𝕊**__\n\n"
@@ -69,7 +69,7 @@ async def amireallyalive(alive):
         deadly_caption += f"**★ 𝕌𝕡𝕥𝕚𝕞𝕖 :** `{uptime}\n`"
         deadly_caption += f"**★ 𝕄𝕒𝕤𝕥𝕖𝕣 :** {mention}\n"
         await alive.client.send_file(
-            alive.chat_id, MAFIA_IMG, caption=deadly_caption, reply_to=reply_to_id
+            alive.chat_id, DEADLY_GHOULS_IMG, caption=deadly_caption, reply_to=reply_to_id
         )
         await alive.delete()
     else:
