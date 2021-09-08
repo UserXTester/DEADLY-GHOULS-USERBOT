@@ -2,7 +2,7 @@
 # KEEP CREDIT
 # MADE FOR HELLBOT
 # BY TEAM HELLBOT
-# NOW IN MAFIABOT
+# NOW IN DeadlyGhouls
 import math
 
 from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply

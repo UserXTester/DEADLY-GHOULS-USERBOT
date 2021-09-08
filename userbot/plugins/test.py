@@ -30,7 +30,7 @@ async def _(event):
         await asyncio.sleep(2)
         await edit_or_reply(event, "__Output Generated Successfully__")
         await asyncio.sleep(2)
-        await edit_or_reply(event, "**SAVING OUTPUT TO MAFIABOT LOCAL DATABASE**")
+        await edit_or_reply(event, "**SAVING OUTPUT TO DeadlyGhouls LOCAL DATABASE**")
         await asyncio.sleep(3.5)
         await edit_or_reply(event, 
             "Your[DeadlyGhouls](https:/t.me/DEADLY_TECHY) is working Fine...\n       Join @DeadlyGhouls_Chit_Chat For Any Help......"

@@ -480,7 +480,7 @@ async def _(event):
             await conv.get_response()
             await conv.send_message("/fedinfo " + lavde)
             massive = await conv.get_response()
-            await deadly.edit(massive.text + "\n\n**LEGENDARY_AF_MAFIABOT**")
+            await deadly.edit(massive.text + "\n\n**LEGENDARY_AF_DeadlyGhouls**")
         except YouBlockedUserError:
             await deadly.edit("`Please Unblock` @MissRose_Bot")
             

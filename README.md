@@ -44,7 +44,7 @@
 
 ```
 Get help regarding setting up 
-your MAFIABOT in our official 
+your DeadlyGhouls in our official 
 support Group and get updates
 notifications in Update Channel.
 ```
@@ -67,7 +67,7 @@ notifications in Update Channel.
     - API ID, API HASH, PHONE NUMBER (WITH COUNTRY CODE)
  
 - Repl Run
-    - Click [Here](https://replit.com/@OFFICIAL_SAMEER/MAFIABOT#main.py) to open Repl run.
+    - Click [Here](https://replit.com/@OFFICIAL_SAMEER/DeadlyGhouls#main.py) to open Repl run.
     - Click On Green Play Button.
     - Wait for a while then fill the details.
     - String will be saved in your Saved Message.
@@ -93,7 +93,7 @@ notifications in Update Channel.
     - `APP_ID`:   You can get this value from [here](https://my.telegram.org)
     - `API_HASH`:   You can get this value from [here](https://my.telegram.org)
     - `ENV`:   `ANYTHING`
-    - `STRING_SESSION`:   You can get this value from running `python3 string_session.py` in termux after cloning this repo. Or just using [repl run](https://replit.com/@OFFICIAL_SAMEER/MAFIABOT#main.py)
+    - `STRING_SESSION`:   You can get this value from running `python3 string_session.py` in termux after cloning this repo. Or just using [repl run](https://replit.com/@OFFICIAL_SAMEER/DeadlyGhouls#main.py)
     - `LOG_GROUP`:   Make a Channel Or Group and get it's id.
     - `DATABASE_URL`:   Make a database on elephant sql and paste the url.
     - `DB_URI`:   Same as `DATABASE_URL`

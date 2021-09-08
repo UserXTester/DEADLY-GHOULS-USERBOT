@@ -14,11 +14,11 @@ async def _(event):
     response = requests.get(url)
     await event.edit("`Creating a fake face...`")
     if response.status_code == 200:
-      with open("MAFIABOT.jpg", 'wb') as f:
+      with open("DeadlyGhouls.jpg", 'wb') as f:
         f.write(response.content)
     
     captin = f"Fake Image By DeadlyGhouls."
-    fole = "MAFIABOT.jpg"
+    fole = "DeadlyGhouls.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/MAFIABOT.jpg ")
+    os.system("rm /root/userbot/DeadlyGhouls.jpg ")
