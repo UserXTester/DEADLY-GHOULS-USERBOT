@@ -1,4 +1,4 @@
-"""Fetch App Details from Playstore. @DeadlyGhouls_Support
+"""Fetch App Details from Playstore. @DEADLY_USERBOT
 .app <app_name> to fetch app details.
 .appr <app_name>  to fetch app details with Xpl0iter request link.
 .mods <app_name> to get the premier app from telegram if available.."""
