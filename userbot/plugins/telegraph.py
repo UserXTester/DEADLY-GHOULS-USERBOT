@@ -8,7 +8,7 @@ from userbot import ALIVE_NAME
 from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 
 official_sameer = bot.uid
 
@@ -23,7 +23,7 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.PLUGIN_CHANNEL is None:
-        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [DeadlyGhouls Chat Group](t.me/Mafiabot_Chit_Chat) for assistance"
+        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [DeadlyGhouls Chat Group](t.me/DeadlyGhoulsbot_Chit_Chat) for assistance"
         )
         return
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):

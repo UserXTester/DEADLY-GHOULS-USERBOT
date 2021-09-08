@@ -9,7 +9,7 @@ from userbot.cmdhelp import CmdHelp
 from userbot import *
 from DeadlyGhouls.utils import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))

@@ -1,6 +1,6 @@
 #credit goes to Hellbot
-#modifiy by @D3krish for Mafiabot
-#If you kang this plugin please don't forget to give credit to Mafiabot and Hellbot. 
+#modifiy by @D3krish for DeadlyGhoulsbot
+#If you kang this plugin please don't forget to give credit to DeadlyGhoulsbot and Hellbot. 
 import os
 import random
 import time
@@ -10,7 +10,7 @@ from telethon.tl.types import InputMessagesFilterPhotos, InputMessagesFilterDocu
 from DeadlyGhouls.utils import admin_cmd, sudo_cmd, edit_or_reply
 from . import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 deadly = borg.uid
 
 PICS_STR = []

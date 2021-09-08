@@ -1,4 +1,4 @@
-# this plugin made by Mafia Userbot
+# this plugin made by DeadlyGhouls Userbot
 
 """Plugin for HellBot Repo
 

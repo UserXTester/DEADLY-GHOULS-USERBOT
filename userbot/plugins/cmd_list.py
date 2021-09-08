@@ -5,7 +5,7 @@ from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import bot as DeadlyGhouls
 from userbot import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 deadly_logo = "./OFFICIAL_SAMEER/DeadlyGhouls_logo.jpg"
 
 @DeadlyGhouls.on(admin_cmd(pattern=r"cmds"))

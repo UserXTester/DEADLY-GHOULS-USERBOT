@@ -15,7 +15,7 @@ from DeadlyGhouls.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to kraken, john snow
 from userbot.cmdhelp import CmdHelp
 # credits to kraken, john snow
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 # credits to kraken, john snow
 official_sameer = bot.uid
 # credits to kraken, john snow

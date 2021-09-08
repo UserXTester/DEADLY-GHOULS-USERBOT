@@ -19,7 +19,7 @@ night_time = None
 last_night_message = {}
 
 DEFAULTUSER = (
-    str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+    str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 )
 
 
@@ -40,7 +40,7 @@ async def set_not_night(event):
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` "
                 + "for the proper functioning of night functionality "
-                + "report in [DeadlyGhouls](t.me/Mafia_Chit_Chat)\n\n `{}`".format(str(e)),
+                + "report in [DeadlyGhouls](t.me/DeadlyGhouls_Chit_Chat)\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )

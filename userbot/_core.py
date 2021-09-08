@@ -10,7 +10,7 @@ from userbot import *
 from userbot import bot as DeadlyGhouls
 
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DeadlyGhouls User"
 deadly_logo = "./OFFICIAL_SAMEER/DeadlyGhouls_logo.jpg"
 official_sameer = DeadlyGhouls.uid
 deadly = f"[{DEFAULTUSER}](tg://user?id={official_sameer})"
